@@ -511,5 +511,220 @@
     "bubble": "오늘 한 번 크게 웃어요",
     "speaker": "song-e",
     "source": "초코송이 아침 한 줄 #021"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s008-flu-shot",
+    "type": "list",
+    "title": "65세 이상\n독감 예방접종 챙기기",
+    "items": [
+      "65세 이상은 무료로 맞을 수 있어요",
+      "가까운 지정 병원이나 보건소에서",
+      "갈 때 신분증 챙기기"
+    ],
+    "bubble": "올가을 접종, 잊지 마세요",
+    "source": "출처: 질병관리청 국가예방접종 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s009-333-brushing",
+    "type": "list",
+    "title": "치아 건강 지키는\n3·3·3 양치법",
+    "items": [
+      "하루 3번",
+      "밥 먹고 3분 안에",
+      "3분 동안 꼼꼼히"
+    ],
+    "bubble": "오늘 저녁부터 3분 양치",
+    "source": "출처: 대한치과의사협회 3·3·3 운동"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s010-balance",
+    "type": "list",
+    "title": "넘어지지 않는 몸 만들기\n균형·근력 운동",
+    "items": [
+      "일주일에 3일 이상",
+      "의자 잡고 한 발로 10초 서기",
+      "의자에서 천천히 앉았다 일어서기"
+    ],
+    "bubble": "무리하지 말고 천천히 해요",
+    "source": "출처: WHO 신체활동 지침(2020), 65세 이상"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s011-dementia-check",
+    "type": "one",
+    "title": "치매 조기 검진\n보건소에서 무료로",
+    "body": "60세 이상이면\n보건소 치매안심센터에서\n무료로 검사받을 수 있어요.\n\n일찍 알수록 좋아요.",
+    "bubble": "부모님께 알려 드려요",
+    "source": "출처: 보건복지부·중앙치매센터"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s012-care-service",
+    "type": "one",
+    "title": "혼자 지내기 힘들 때\n노인맞춤돌봄서비스",
+    "body": "안부 확인, 말벗,\n생활 도움을 받을 수 있어요.\n\n주민센터에서\n신청 방법을 물어보세요.",
+    "bubble": "도움 받는 것도 용기예요",
+    "source": "출처: 보건복지부 노인맞춤돌봄서비스"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s013-basic-pension",
+    "type": "one",
+    "title": "기초연금\n언제 신청할까요",
+    "body": "만 65세 생일이 있는 달\n한 달 전부터\n신청할 수 있어요.\n\n주민센터나\n국민연금공단 지사에서.",
+    "bubble": "생일 전에 미리 챙겨요",
+    "source": "출처: 보건복지부 기초연금 안내"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h008-blank-review",
+    "type": "list",
+    "title": "늦깎이 대학생의\n시험공부 백지 복습",
+    "items": [
+      "책을 덮고 빈 종이 꺼내기",
+      "기억나는 것을 모두 적기",
+      "책과 비교해 빠진 것 표시"
+    ],
+    "bubble": "다시 읽기보다 꺼내 보기",
+    "source": "출처: Roediger·Karpicke(2006), Psychological Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h009-spaced",
+    "type": "list",
+    "title": "한 번에 몰아 보지 말고\n나눠서 다시 보기",
+    "items": [
+      "배운 날 바로 한 번",
+      "하루 뒤 다시 한 번",
+      "일주일 뒤 마지막으로"
+    ],
+    "bubble": "잊을 때쯤 다시 보는 게 비결",
+    "source": "출처: Cepeda 외(2006), Psychological Bulletin"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h010-meal-plan",
+    "type": "list",
+    "title": "40대 주부의\n일주일 식단 미리 짜기",
+    "items": [
+      "일요일 저녁 10분 투자",
+      "냉장고 재료부터 쓰는 메뉴",
+      "겹치는 재료로 장보기 줄이기"
+    ],
+    "bubble": "저녁 메뉴 고민이 줄어요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h011-study-block",
+    "type": "one",
+    "title": "엄마의 공부 시간\n90분 블록 만들기",
+    "body": "아이 등교 후\n90분만 공부 시간으로 정해요.\n\n휴대폰은 다른 방에,\n타이머는 책상 위에.",
+    "bubble": "매일 같은 시간이 힘이 돼요",
+    "source": "엄마는 늦깎이 대학생 공부노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h012-presentation",
+    "type": "list",
+    "title": "첫 발표가 떨린다면\n이렇게 준비해요",
+    "items": [
+      "하고 싶은 말을 1분으로 요약",
+      "소리 내어 3번 연습",
+      "첫 문장은 외워 두기"
+    ],
+    "bubble": "떨려도 끝까지 하면 성공",
+    "source": "엄마는 늦깎이 대학생 공부노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h013-scholarship",
+    "type": "one",
+    "title": "늦깎이 대학생도\n국가장학금 신청해요",
+    "body": "한국장학재단 누리집에서\n학기마다 신청 기간이 있어요.\n\n기간을 놓치지 않게\n달력에 먼저 적어 둬요.",
+    "bubble": "등록금 부담 덜어 봐요",
+    "source": "출처: 한국장학재단 국가장학금 안내"
+  },
+  {
+    "id": "012-nature-120",
+    "type": "one",
+    "title": "일주일에 120분\n자연 속에서 보내기",
+    "body": "공원이나 숲에서\n일주일에 120분 이상 보낸 사람이\n건강하고 행복하다고\n답한 비율이 높았어요.",
+    "bubble": "주말엔 공원 한 바퀴 어때요?",
+    "speaker": "song-e",
+    "source": "출처: White 외(2019), Scientific Reports"
+  },
+  {
+    "id": "013-eat-slowly",
+    "type": "one",
+    "title": "천천히 먹으면\n덜 먹게 돼요",
+    "body": "배부르다는 신호가\n뇌에 닿기까지\n20분쯤 걸려요.\n\n한 입에 한 번 수저 내려놓기.",
+    "bubble": "오늘 점심은 천천히",
+    "speaker": "choko",
+    "source": "출처: Harvard Health Publishing"
+  },
+  {
+    "id": "014-parkinson-law",
+    "type": "vs",
+    "title": "마감이 길면\n일도 길어져요",
+    "left_head": "넉넉한 마감",
+    "left": [
+      "시간이 남아 미루기",
+      "일이 점점 커짐",
+      "끝나고도 찜찜"
+    ],
+    "right_head": "짧은 마감",
+    "right": [
+      "작게 나눠 바로 시작",
+      "필요한 것만 하기",
+      "제때 끝내기"
+    ],
+    "bubble": "오늘 일, 마감을 먼저 정해요",
+    "speaker": "song-e",
+    "source": "출처: C. Northcote Parkinson, The Economist(1955)"
+  },
+  {
+    "id": "015-kindness-5",
+    "type": "list",
+    "title": "하루에 친절 5가지\n한꺼번에 해 보기",
+    "items": [
+      "문 잡아 주기",
+      "고맙다는 말 먼저 하기",
+      "동료에게 커피 한 잔",
+      "엘리베이터 버튼 눌러 주기",
+      "가족에게 칭찬 한마디"
+    ],
+    "bubble": "하나만 해도 기분이 좋아져요",
+    "speaker": "choko",
+    "source": "출처: Lyubomirsky 외(2005), Review of General Psychology"
+  },
+  {
+    "id": "016-eisenhower",
+    "type": "list",
+    "title": "할 일이 많을 때\n네 칸으로 나누기",
+    "items": [
+      "급하고 중요한 일: 지금 하기",
+      "중요하지만 급하지 않은 일: 날짜 잡기",
+      "급하지만 덜 중요한 일: 맡기기",
+      "둘 다 아닌 일: 빼기"
+    ],
+    "bubble": "중요한 일부터 날짜를 잡아요",
+    "speaker": "song-e",
+    "source": "출처: Stephen R. Covey, 『The 7 Habits of Highly Effective People』(1989)"
   }
 ]
