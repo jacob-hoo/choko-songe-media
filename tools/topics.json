@@ -726,5 +726,77 @@
     "bubble": "중요한 일부터 날짜를 잡아요",
     "speaker": "song-e",
     "source": "출처: Stephen R. Covey, 『The 7 Habits of Highly Effective People』(1989)"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s014-smishing",
+    "type": "list",
+    "title": "이런 문자 링크는\n누르지 마세요",
+    "items": [
+      "택배 주소 확인해 달라는 문자",
+      "부고·청첩장이라며 온 링크",
+      "정부 지원금 신청하라는 문자"
+    ],
+    "bubble": "모르는 링크는 바로 지워요",
+    "source": "출처: 경찰청·KISA 118 스미싱 예방 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s015-water",
+    "type": "one",
+    "title": "목마르지 않아도\n물 한 잔",
+    "body": "나이가 들면\n목마름을 덜 느껴요.\n\n식사 때와 약 드실 때\n물 한 잔씩 챙겨요.",
+    "bubble": "식탁에 물컵 하나 올려 둬요",
+    "source": "출처: 국가건강정보포털"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s016-medicine-list",
+    "type": "list",
+    "title": "약을 여러 가지 드신다면\n이렇게 챙겨요",
+    "items": [
+      "먹는 약 이름을 수첩에 적기",
+      "약 봉투는 사진 찍어 두기",
+      "진료 때 의사·약사에게 보여 주기"
+    ],
+    "bubble": "병원 갈 때 수첩 꼭 챙겨요",
+    "source": "출처: 식품의약품안전처 의약품 안전사용 안내"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h014-midterm-plan",
+    "type": "list",
+    "title": "중간고사 일주일 전\n계획표 짜기",
+    "items": [
+      "과목별 시험 범위 먼저 적기",
+      "하루에 두 과목씩 나누기",
+      "마지막 날은 복습만"
+    ],
+    "bubble": "계획표만 있어도 덜 불안해요",
+    "source": "엄마는 늦깎이 대학생 공부노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h015-library-ebook",
+    "type": "one",
+    "title": "전공 책값 아끼는 법\n도서관 전자책",
+    "body": "동네 공공도서관 회원이면\n전자책을 무료로 빌릴 수 있어요.\n\n학교 도서관 전자책도\n먼저 찾아봐요.",
+    "bubble": "책 사기 전에 검색부터",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h016-evening-30",
+    "type": "one",
+    "title": "아이 숙제 시간에\n엄마도 같이 공부",
+    "body": "저녁 30분,\n아이는 숙제하고\n엄마는 과제해요.\n\n서로 응원하는\n우리 집 공부 시간.",
+    "bubble": "오늘 저녁 같이 해 봐요",
+    "source": "엄마는 늦깎이 대학생 정복기"
   }
 ]
