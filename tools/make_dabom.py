@@ -7,6 +7,7 @@
 문구는 아래 SLIDES만 고치면 된다. 링크 주소가 정해지면 LINK_TEXT를 바꾼다.
 """
 import subprocess
+import sys
 from pathlib import Path
 
 import imageio_ffmpeg
@@ -178,7 +179,7 @@ def main():
         frames.append(p)
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     music = ROOT / "music" / "dabom-15s.wav"
-    subprocess.run([str(ROOT / ".venv" / "Scripts" / "python.exe"), str(ROOT / "make_music.py"), str(music), "15"], check=True)
+    subprocess.run([sys.executable, str(ROOT / "make_music.py"), str(music), "15"], check=True)
     cmd = [ff, "-y", "-loglevel", "error"]
     for p in frames:
         cmd += ["-loop", "1", "-t", "3.5", "-i", str(p)]

@@ -380,5 +380,136 @@
     "body": "제출 버튼 앞에서\n손이 떨려도 괜찮아요.\n\n점수보다 먼저\n끝까지 해낸 나를\n칭찬해 주세요.",
     "bubble": "우리 같이 한 학기 버텨요",
     "source": "엄마는 늦깎이 대학생 정복기 #1"
+  },
+  {
+    "id": "007-sleep-7h",
+    "type": "one",
+    "title": "어른의 잠, 몇 시간이 좋을까\n하루 7시간 이상",
+    "body": "미국 질병통제예방센터는\n18~60세 어른에게\n하루 7시간 이상을 권해요",
+    "bubble": "오늘은 30분 일찍 누워요",
+    "speaker": "choko",
+    "source": "출처: CDC, Sleep and Sleep Disorders"
+  },
+  {
+    "id": "008-who-150",
+    "type": "list",
+    "title": "운동, 얼마나 하면 될까\n일주일 150분",
+    "items": [
+      "빠르게 걷기 주 150분 이상",
+      "하루로 나누면 약 22분",
+      "근력 운동은 주 2일 이상"
+    ],
+    "bubble": "점심 먹고 20분 걸어요",
+    "speaker": "song-e",
+    "source": "출처: WHO 신체활동 지침(2020)"
+  },
+  {
+    "id": "009-three-good-things",
+    "type": "list",
+    "title": "잠들기 전 1분\n좋았던 일 3가지 쓰기",
+    "items": [
+      "오늘 좋았던 일 3가지 적기",
+      "왜 좋았는지 한 줄 덧붙이기",
+      "일주일 동안 이어 보기"
+    ],
+    "bubble": "오늘 좋았던 일 하나는요?",
+    "speaker": "choko",
+    "source": "출처: Seligman 외(2005), American Psychologist"
+  },
+  {
+    "id": "010-pay-yourself-first",
+    "type": "vs",
+    "title": "월급날 저축 순서\n먼저 떼어 두기",
+    "left_head": "쓰고 남으면 저축",
+    "left": [
+      "남는 돈이 거의 없음",
+      "저축이 들쭉날쭉",
+      "목표가 자꾸 밀림"
+    ],
+    "right_head": "먼저 떼어 두기",
+    "right": [
+      "월급날 자동이체",
+      "남은 돈으로 생활",
+      "저축이 꾸준해짐"
+    ],
+    "bubble": "자동이체 하나 걸어 둬요",
+    "speaker": "song-e",
+    "source": "출처: George S. Clason, 『The Richest Man in Babylon』(1926)"
+  },
+  {
+    "id": "011-ivy-lee",
+    "type": "list",
+    "title": "하루를 잘 끝내는 법\n아이비 리 방법",
+    "items": [
+      "퇴근 전, 내일 할 일 6개 적기",
+      "중요한 순서로 번호 매기기",
+      "1번부터 하나씩 끝내기"
+    ],
+    "bubble": "내일 할 일 6개, 지금 적어요",
+    "speaker": "choko",
+    "source": "출처: Ivy Lee Method (1918)"
+  },
+  {
+    "id": "m015-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "오늘 하루도\n나에게 다정하게\n말을 걸어 줘.",
+    "bubble": "오늘 나에게 고마운 일 하나",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #015"
+  },
+  {
+    "id": "m016-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "기다려 주는 사람이 있어서\n오늘도\n힘을 내.",
+    "bubble": "오늘 누가 나를 기다릴까요?",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #016"
+  },
+  {
+    "id": "m017-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "꽃은 서두르지 않아도\n제때\n피어나.",
+    "bubble": "오늘은 조급해하지 않기로 해요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #017"
+  },
+  {
+    "id": "m018-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "한 주를 잘 보낸 나에게\n따뜻한 박수를\n보내 줘.",
+    "bubble": "이번 주도 수고했어요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #018"
+  },
+  {
+    "id": "m019-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "마음이 무거운 날엔\n잠깐 멈춰서\n하늘을 봐.",
+    "bubble": "오늘 하늘은 무슨 색이에요?",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #019"
+  },
+  {
+    "id": "m020-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "작은 칭찬 한마디가\n누군가의 하루를\n밝혀 줘.",
+    "bubble": "오늘 칭찬 하나 건네요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #020"
+  },
+  {
+    "id": "m021-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "같이 웃은 순간은\n오래오래\n마음에 남아.",
+    "bubble": "오늘 한 번 크게 웃어요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #021"
   }
 ]

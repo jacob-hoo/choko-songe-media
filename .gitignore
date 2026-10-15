@@ -1,0 +1,4 @@
+tools/.venv/
+tools/out/
+tools/music/
+__pycache__/
