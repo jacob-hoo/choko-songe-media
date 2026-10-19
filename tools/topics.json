@@ -798,5 +798,179 @@
     "body": "저녁 30분,\n아이는 숙제하고\n엄마는 과제해요.\n\n서로 응원하는\n우리 집 공부 시간.",
     "bubble": "오늘 저녁 같이 해 봐요",
     "source": "엄마는 늦깎이 대학생 정복기"
+  },
+  {
+    "id": "017-nap-26",
+    "type": "one",
+    "title": "낮잠은 짧게\n20~30분이면 충분해요",
+    "body": "26분 낮잠을 잔\n조종사들의 집중력이\n눈에 띄게 올랐어요.\n\n30분을 넘기면\n깬 뒤 더 멍할 수 있어요.",
+    "bubble": "점심 뒤 20분만 눈 붙여요",
+    "speaker": "choko",
+    "source": "출처: Rosekind 외(1995), NASA 조종사 낮잠 연구"
+  },
+  {
+    "id": "018-if-then",
+    "type": "list",
+    "title": "계획은 이렇게\n'~하면 ~한다'로",
+    "items": [
+      "저녁 먹으면 10분 걷기",
+      "출근하면 물 한 잔",
+      "누우면 휴대폰 멀리"
+    ],
+    "bubble": "언제 할지 먼저 정해요",
+    "speaker": "song-e",
+    "source": "출처: Gollwitzer·Sheeran(2006), 실행 의도 연구"
+  },
+  {
+    "id": "m022-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "내가 건넨\n작은 친절은\n돌고 돌아\n다시 나에게 와.",
+    "bubble": "오늘 먼저 웃어 줘요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #022"
+  },
+  {
+    "id": "019-handwash-20",
+    "type": "list",
+    "title": "손 씻기\n20초면 충분해요",
+    "items": [
+      "물에 적시고 비누 칠하기",
+      "손등·손가락 사이·손톱 밑까지",
+      "20초 문지르고 흐르는 물에 헹구기"
+    ],
+    "bubble": "생일 축하 노래 두 번이에요",
+    "speaker": "choko",
+    "source": "출처: CDC, Handwashing"
+  },
+  {
+    "id": "020-sleep-room",
+    "type": "list",
+    "title": "잠이 잘 오는 방\n이렇게 만들어요",
+    "items": [
+      "매일 같은 시간에 자고 일어나기",
+      "침실은 조용하고 어둡게",
+      "휴대폰·TV는 침실 밖으로"
+    ],
+    "bubble": "오늘은 휴대폰을 거실에 둬요",
+    "speaker": "song-e",
+    "source": "출처: CDC, Tips for Better Sleep"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s017-pneumococcal",
+    "type": "one",
+    "title": "65세 이상\n폐렴구균 예방접종 무료",
+    "body": "만 65세 이상이면\n보건소와 지정 병원에서\n무료로 맞을 수 있어요.\n\n한 번 맞으면 돼요.",
+    "bubble": "독감 주사 맞을 때 같이 물어봐요",
+    "source": "출처: 질병관리청 예방접종도우미"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s018-health-check",
+    "type": "one",
+    "title": "올해 건강검진\n받으셨나요",
+    "body": "2026년은\n짝수 해에 태어난 분이\n일반건강검진 대상이에요.\n\n12월 31일까지\n받아야 해요.",
+    "bubble": "대상인지 건강보험공단에 물어봐요",
+    "source": "출처: 국민건강보험공단 건강검진 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s019-senior-job",
+    "type": "one",
+    "title": "다음 해 노인일자리\n미리 알아봐요",
+    "body": "노인일자리는\n보통 연말에\n다음 해 참여자를 모집해요.\n\n주민센터나\n노인복지관에 물어보세요.",
+    "bubble": "모집 기간을 놓치지 마세요",
+    "source": "출처: 보건복지부·한국노인인력개발원"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s020-gas-smell",
+    "type": "list",
+    "title": "가스 냄새가 나면\n이렇게 하세요",
+    "items": [
+      "가스 밸브부터 잠그기",
+      "창문 열어 환기하기",
+      "전기 스위치 만지지 않기",
+      "밖에 나가 가스 회사에 연락"
+    ],
+    "bubble": "불을 켜지 말고 창문부터",
+    "source": "출처: 한국가스안전공사 가스 안전 수칙"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s021-implant",
+    "type": "one",
+    "title": "65세 이상\n임플란트 건강보험",
+    "body": "만 65세 이상이면\n평생 2개까지\n건강보험이 적용돼요.\n\n본인 부담은\n30%예요.",
+    "bubble": "치과 가기 전에 꼭 물어봐요",
+    "source": "출처: 국민건강보험공단"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h017-pomodoro",
+    "type": "list",
+    "title": "집중이 안 될 때\n25분 공부법",
+    "items": [
+      "타이머 25분 맞추고 공부",
+      "5분 쉬기",
+      "네 번 하면 길게 쉬기"
+    ],
+    "bubble": "딱 25분만 앉아 봐요",
+    "source": "출처: Francesco Cirillo, 포모도로 기법"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h018-backward-plan",
+    "type": "list",
+    "title": "과제 마감\n거꾸로 계획하기",
+    "items": [
+      "마감 날짜를 달력에 먼저 적기",
+      "하루 전은 검토하는 날",
+      "남은 날을 자료·초안으로 나누기"
+    ],
+    "bubble": "마감일부터 적어 봐요",
+    "source": "엄마는 늦깎이 대학생 공부노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h019-family-calendar",
+    "type": "one",
+    "title": "우리 집\n달력 하나로 합치기",
+    "body": "엄마 시험,\n아이 학교 행사,\n가족 약속을\n한 달력에 적어요.\n\n겹치는 날이\n미리 보여요.",
+    "bubble": "냉장고에 달력 붙여요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h020-campus-free",
+    "type": "list",
+    "title": "학교 무료 프로그램\n챙겨 써요",
+    "items": [
+      "학습지원센터 글쓰기 도움",
+      "학생상담센터 상담",
+      "도서관 자료 찾기 교육"
+    ],
+    "bubble": "학교 누리집부터 확인해요",
+    "source": "※ 학교마다 다르니 누리집에서 확인하세요"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h021-laundry-study",
+    "type": "one",
+    "title": "세탁기 돌아가는\n한 시간 쓰는 법",
+    "body": "빨래를 먼저 돌리고\n그 한 시간은\n공부 시간으로 써요.\n\n기다리는 시간이\n공부 시간이 돼요.",
+    "bubble": "오늘 저녁 빨래부터 돌려요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
