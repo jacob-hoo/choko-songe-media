@@ -28,6 +28,9 @@ P
   echo "=== $(date '+%F %T') 끝 (exit $?)"
 } >"$LOG" 2>&1
 
+SUMMARY=$(grep -E '^(만든 것|실패·재예약|막힌 것):' "$LOG" | tail -3)
+[ -n "$SUMMARY" ] || SUMMARY="루틴이 정상 보고를 남기지 못했습니다. 로그: $LOG"
+
 # 공용 볼트 일지(50_일지/오늘.md, '## 클이사' 아래)에 같은 결과를 남긴다. 동기화는 vault-sync.timer 가 한다.
 python3 - "$SUMMARY" <<'PY' >>"$LOG" 2>&1
 import sys, datetime, pathlib, re
@@ -49,8 +52,6 @@ print("vault log ok", f)
 PY
 
 # 지휘통제실로 결과 보고(클이사 봇). 토큰은 출력하지 않는다.
-SUMMARY=$(grep -E '^(만든 것|실패·재예약|막힌 것):' "$LOG" | tail -3)
-[ -n "$SUMMARY" ] || SUMMARY="루틴이 정상 보고를 남기지 못했습니다. 로그: $LOG"
 TOKEN=$(grep -E '^DISCORD_BOT_TOKEN=' "$HOME/.hermes/.env" | cut -d= -f2- | tr -d '"'"'")
 CH=1554055714505236521
 python3 - "$SUMMARY" <<'PY' | curl -s -o /dev/null -w '%{http_code}\n' -X POST \
