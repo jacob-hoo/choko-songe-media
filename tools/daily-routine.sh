@@ -15,7 +15,13 @@ PROMPT=$(cat <<'P'
 - 어제·오늘 게시분에 ERROR가 있으면 그 플랫폼만 20:30·21:30 등 빈 시간에 재예약한다(유튜브는 채널당 하루 6개 이하).
 - 작업: tools/topics.json(CRLF; python json indent=2, "\n"→"\r\n", 끝 줄바꿈 없음) 추가 → tools/.venv/bin/python tools/make_cards.py --only <id> → 카드 PNG 직접 열어 검수 → mp4를 저장소 루트에 복사, git commit(끝줄 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>')·push → raw.githubusercontent.com 200·크기 일치 확인 → createScheduledPost(videoCoverMilliseconds 0, providers youtube·instagram REEL·tiktok·threads, 응답 시각 확인).
 - 출처가 분명한 사실만. 기존 주제와 겹치지 않게.
-- 마지막 출력은 정확히 3줄: "만든 것: …" / "실패·재예약: …" / "막힌 것: …(없으면 없음)".
+
+[쿠팡 상품 쇼츠 — 정보 쇼츠가 끝난 뒤. 절차는 ~/.claude/skills/making-coupang-shorts/SKILL.md]
+- 예약: tools/.venv/bin/python tools/coupang/run.py pending 의 항목만 예약한다(대장님이 approve 한 것). mp4를 저장소 루트에 media_name으로 복사·commit·push·raw 200 확인 → 브랜드마다 createScheduledPost를 플랫폼별로 따로 호출(instagram REEL+firstCommentText=pinned_comment, threads, tiktok commercialContentThirdParty=true; 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> threads=<id> tiktok=<id>.
+- 제작: run.py build (내일 분량) → run.py check <내일>. 실패 항목은 고치지 말고 보고만 한다. approve 는 절대 실행하지 않는다.
+- 상품이 없으면(products.csv 소진) 보고만 한다.
+
+- 마지막 출력은 정확히 4줄: "만든 것: …" / "실패·재예약: …" / "쿠팡: 예약 n건, 승인 대기 n건(check 실패 사유 요약)" / "막힌 것: …(없으면 없음)".
 P
 )
 
@@ -28,7 +34,7 @@ P
   echo "=== $(date '+%F %T') 끝 (exit $?)"
 } >"$LOG" 2>&1
 
-SUMMARY=$(grep -E '^(만든 것|실패·재예약|막힌 것):' "$LOG" | tail -3)
+SUMMARY=$(grep -E '^(만든 것|실패·재예약|쿠팡|막힌 것):' "$LOG" | tail -4)
 [ -n "$SUMMARY" ] || SUMMARY="루틴이 정상 보고를 남기지 못했습니다. 로그: $LOG"
 
 # 공용 볼트 일지(50_일지/오늘.md, '## 클이사' 아래)에 같은 결과를 남긴다. 동기화는 vault-sync.timer 가 한다.

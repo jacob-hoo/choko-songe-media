@@ -2,3 +2,4 @@ tools/.venv/
 tools/out/
 tools/music/
 __pycache__/
+tools/coupang/out/
