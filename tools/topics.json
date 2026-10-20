@@ -972,5 +972,110 @@
     "body": "빨래를 먼저 돌리고\n그 한 시간은\n공부 시간으로 써요.\n\n기다리는 시간이\n공부 시간이 돼요.",
     "bubble": "오늘 저녁 빨래부터 돌려요",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m023-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "천천히 가도\n괜찮아.\n\n오늘 한 걸음이면\n충분해.",
+    "bubble": "한 걸음만 같이 가요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #023"
+  },
+  {
+    "id": "021-walk-idea",
+    "type": "one",
+    "title": "생각이 막힐 땐\n일단 걸어 보세요",
+    "body": "걸으면서 떠올린\n아이디어가\n앉아 있을 때보다\n평균 60% 많았어요.\n\n실내 러닝머신에서도\n효과가 있었어요.",
+    "bubble": "막히면 10분만 걸어요",
+    "speaker": "song-e",
+    "source": "출처: Oppezzo·Schwartz(2014), 스탠퍼드대 연구"
+  },
+  {
+    "id": "022-habit-66",
+    "type": "list",
+    "title": "새 습관이 몸에 붙는 데\n평균 66일",
+    "items": [
+      "사람마다 18일에서 254일까지 달라요",
+      "하루 빠져도 크게 상관없었어요",
+      "같은 때·같은 곳에서 반복하기"
+    ],
+    "bubble": "오늘 하루 빠져도 괜찮아요",
+    "speaker": "choko",
+    "source": "출처: Lally 외(2010), European Journal of Social Psychology"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s022-119-ansim",
+    "type": "one",
+    "title": "119 안심콜\n미리 등록해 두세요",
+    "body": "앓는 병과 먹는 약,\n보호자 연락처를\n미리 등록해 두면\n\n신고할 때 구급대원이\n바로 확인해요.",
+    "bubble": "자녀와 같이 등록해요",
+    "source": "출처: 소방청 119안심콜 서비스"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s023-cold",
+    "type": "list",
+    "title": "곧 추워져요\n한파 건강 수칙",
+    "items": [
+      "실내 온도 18~20도 유지하기",
+      "얇은 옷을 여러 겹 입기",
+      "외출할 땐 모자·장갑·목도리",
+      "추운 새벽 운동은 피하기"
+    ],
+    "bubble": "나가기 전 날씨부터 봐요",
+    "source": "출처: 질병관리청 한파 대비 건강수칙"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s024-stroke-sign",
+    "type": "list",
+    "title": "뇌졸중 의심 신호\n이웃·손·발·시선",
+    "items": [
+      "이: '이~' 하고 웃을 때 입이 처지면",
+      "손: 두 팔을 앞으로 뻗을 때 한쪽이 처지면",
+      "발: 발음이 어눌하면",
+      "시선: 눈이 한쪽으로 쏠리면"
+    ],
+    "bubble": "하나라도 보이면 바로 119",
+    "source": "출처: 질병관리청·대한뇌졸중학회"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h022-read-aloud",
+    "type": "one",
+    "title": "외울 건\n소리 내어 읽어요",
+    "body": "눈으로만 읽을 때보다\n소리 내어 읽은 단어를\n더 잘 기억했어요.\n\n외워야 할 핵심만\n골라 읽어요.",
+    "bubble": "핵심 문장만 소리 내요",
+    "source": "출처: MacLeod 외(2010), 소리 내어 읽기 연구"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h023-phone-room",
+    "type": "list",
+    "title": "공부할 때\n휴대폰은 어디에",
+    "items": [
+      "책상 위에 엎어 둬도 집중이 흐트러져요",
+      "가방이나 주머니도 마찬가지예요",
+      "다른 방에 두면 집중이 가장 잘 돼요"
+    ],
+    "bubble": "공부할 땐 휴대폰과 떨어져요",
+    "source": "출처: Ward 외(2017), 텍사스대 연구"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h024-evening-10",
+    "type": "one",
+    "title": "내일 아침을 위한\n저녁 10분",
+    "body": "가방 챙기고\n입을 옷 꺼내 두고\n아침 메뉴 정해 두기.\n\n아침이 한결\n덜 바빠요.",
+    "bubble": "오늘 밤 10분만 써요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
