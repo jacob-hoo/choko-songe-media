@@ -68,6 +68,43 @@ def _frame(headline: str, sub: str, idx: int, total: int, img: Image.Image | Non
     return im
 
 
+def _card(headline: str, sub: str, idx: int, total: int, img: Image.Image | None,
+          price: str, footer: str) -> Image.Image:
+    """캐러셀 전용 1080x1350 배치. 그림 없는 장은 글을 가운데 크게 둔다."""
+    w, h = 1080, 1350
+    im = Image.new("RGB", (w, h), BG)
+    d = ImageDraw.Draw(im)
+    d.rectangle([0, 0, w, 90], fill=INK)
+    tag = _font(FONT_REG, 32)
+    d.text(((w - d.textlength(DISCLOSURE_SHORT, font=tag)) / 2, 26), DISCLOSURE_SHORT, font=tag, fill=(255, 255, 255))
+    d.rectangle([60, 120, 60 + (w - 120) * (idx + 1) / total, 128], fill=ACCENT)
+    hf, sf = _font(FONT_BOLD, 76), _font(FONT_REG, 44)
+
+    def block(text, y, fnt, fill, width):
+        for line in textwrap.wrap(text, width) or [""]:
+            d.text(((w - d.textlength(line, font=fnt)) / 2, y), line, font=fnt, fill=fill)
+            y += int(fnt.size * 1.3)
+        return y
+
+    if img:
+        c = img.copy()
+        c.thumbnail((w - 240, 560))
+        im.paste(c, ((w - c.width) // 2, 170 + (560 - c.height) // 2))
+        y = 780
+    else:
+        lines = len(textwrap.wrap(headline, 11)) + (len(textwrap.wrap(sub, 20)) if sub else 0)
+        y = max(260, (h - lines * 100) // 2 - 80)
+    y = block(headline, y, hf, INK, 11)
+    if sub:
+        y = block(sub, y + 24, sf, (90, 90, 96), 20)
+    if price:
+        pf = _font(FONT_BOLD, 60)
+        d.text(((w - d.textlength(price, font=pf)) / 2, y + 40), price, font=pf, fill=ACCENT)
+    ff = _font(FONT_REG, 34)
+    d.text(((w - d.textlength(footer, font=ff)) / 2, h - 80), footer, font=ff, fill=(120, 120, 126))
+    return im
+
+
 def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     img = _product_image(row.get("image", ""))
     price = f"{int(row['price']):,}원" if row["price"].isdigit() else ""
@@ -85,12 +122,26 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
 
 
 def render_carousel(row: dict, script: dict, out_dir: Path) -> list[Path]:
+    """쿠팡 상품 캐러셀 5장 (1080x1350).
+
+    1장 훅+상품(상단 광고 표시) / 2~3장 편익 / 4장 맞는 사람·주의점 / 5장 댓글 키워드.
+    2026-10-21 AI 인스타 운영 영상 7편 분석: 상품 캐러셀은 4~5장, 같은 내용 릴스와 묶어 올린다.
+    """
     img = _product_image(row.get("image", ""))
-    pages = script["carousel"][:7] + ["저장해두고 필요할 때 보세요"]
+    kw = row.get("dm_keyword") or "링크"
+    no = int("".join(c for c in row["product_id"] if c.isdigit()) or 0)
+    price = f"{int(row['price']):,}원" if row["price"].isdigit() else ""
+    pts = (script["points"] + ["", ""])[:2]
+    pages = [
+        (script["hook"], row["name"], img, ""),
+        (pts[0], "", None, ""),
+        (pts[1], "", None, ""),
+        (script["verdict"], "이런 분께 맞아요", None, price),
+        (f"댓글에 「{kw}」", f"DM으로 링크를 보내 드려요 · 프로필 {no}번", None, ""),
+    ]
     paths = []
-    for i, text in enumerate(pages):
+    for i, (head, sub, im, pr) in enumerate(pages):
         p = out_dir / f"card_{i + 1}.jpg"  # 틱톡 사진은 PNG 불가
-        _frame(text, "", i, len(pages), img if i == 0 else None, size=(1080, 1350),
-               footer=BRANDS[row["brand"]]["name"]).save(p, quality=92)
+        _card(head, sub, i, len(pages), im, pr, BRANDS[row["brand"]]["name"]).save(p, quality=92)
         paths.append(p)
     return paths
