@@ -3,3 +3,5 @@ tools/out/
 tools/music/
 __pycache__/
 tools/coupang/out/
+tools/coupang/docs/
+tools/coupang/benchmarks/
