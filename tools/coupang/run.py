@@ -12,7 +12,7 @@ import sys
 from datetime import date, datetime, timedelta
 
 from config import (ROOT, BRANDS, DEDUPE_DAYS, DISCLOSURE, HEALTH_BANNED, HEALTH_CATEGORY, HEALTH_NOTICE,
-                    HISTORY_FILE, OUT_DIR, PLATFORMS, VIRTUAL_LABEL)
+                    HISTORY_FILE, OUT_DIR, PLATFORMS, VIRTUAL_LABEL, DM_ENABLED)
 import render
 import script_gen
 
@@ -42,7 +42,11 @@ def build_caption(row: dict, s: dict, platform: str) -> str:
     if row.get("category") == HEALTH_CATEGORY:
         virtual += f"\n{HEALTH_NOTICE}"
     if platform == "instagram":
-        return f"{DISCLOSURE}\n\n{s['caption']}{virtual}\n\n댓글에 「{kw}」 남기시면 링크를 DM으로 보내 드려요.\n프로필 링크 {no}번에서도 볼 수 있어요.\n{tags}"
+        cta = (f"댓글에 「{kw}」 남기시면 링크를 DM으로 보내 드려요.\n프로필 링크 {no}번에서도 볼 수 있어요."
+               if DM_ENABLED else f"제품은 프로필 링크 {no}번에서 볼 수 있어요.")
+        return f"{DISCLOSURE}\n\n{s['caption']}{virtual}\n\n{cta}\n{tags}"
+    if platform == "tiktok":  # 틱톡은 팔로워 1,000명 전에는 프로필 링크를 걸 수 없다
+        return f"{DISCLOSURE}\n\n{s['caption']}{virtual}\n\n제품은 인스타·스레드 프로필 링크 {no}번에서 볼 수 있어요\n{tags}"
     if platform == "youtube":
         return f"{DISCLOSURE}\n\n{s['caption']}\n\n구매 링크: 채널 프로필 링크 {no}번\n{tags} #shorts"
     if platform == "threads":

@@ -7,7 +7,7 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from config import (ACCENT, BG, BRANDS, DISCLOSURE_SHORT, FONT_BOLD, FONT_REG,
+from config import (ACCENT, BG, BRANDS, DISCLOSURE_SHORT, DM_ENABLED, FONT_BOLD, FONT_REG,
                     H, INK, SCENE_SEC, W)
 
 
@@ -110,7 +110,8 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     price = f"{int(row['price']):,}원" if row["price"].isdigit() else ""
     scenes = [(script["hook"], row["name"], "")]
     scenes += [(p, "", "") for p in script["points"]]
-    scenes += [(script["verdict"], "", price), (f"댓글에 「{row.get('dm_keyword') or '링크'}」", f"DM 링크 · 프로필 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "")]
+    scenes += [(script["verdict"], "", price), ((f"댓글에 「{row.get('dm_keyword') or '링크'}」", f"DM 링크 · 프로필 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "")
+               if DM_ENABLED else (f"프로필 링크 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "제품 모음에서 보세요", ""))]
     with tempfile.TemporaryDirectory() as tmp:
         for i, (head, sub, pr) in enumerate(scenes):
             _frame(head, sub, i, len(scenes), img, pr, footer=BRANDS[row['brand']]['name']).save(f"{tmp}/{i:02d}.png")
@@ -137,7 +138,8 @@ def render_carousel(row: dict, script: dict, out_dir: Path) -> list[Path]:
         (pts[0], "", None, ""),
         (pts[1], "", None, ""),
         (script["verdict"], "이런 분께 맞아요", None, price),
-        (f"댓글에 「{kw}」", f"DM으로 링크를 보내 드려요 · 프로필 {no}번", None, ""),
+        ((f"댓글에 「{kw}」", f"DM으로 링크를 보내 드려요 · 프로필 {no}번", None, "") if DM_ENABLED
+         else (f"프로필 링크 {no}번", "제품 모음에서 바로 볼 수 있어요", None, "")),
     ]
     paths = []
     for i, (head, sub, im, pr) in enumerate(pages):
