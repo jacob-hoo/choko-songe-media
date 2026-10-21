@@ -34,7 +34,7 @@ ACCENT = {"choko": (122, 74, 44), "song-e": (226, 160, 92)}
 BRANDS = {
     "choko": {"bg": BG, "ink": INK, "sub": SUB, "badge": "초코송이 하루 한 장", "handle": HANDLE, "scale": 1.0,
               "speakers": {"choko": ACCENT["choko"], "song-e": ACCENT["song-e"]}},
-    "silver": {"bg": (246, 250, 244), "ink": (24, 44, 32), "sub": (80, 100, 88), "badge": "봄날 수첩 · 70대의 하루", "handle": "@ljw57183800", "scale": 1.15,
+    "silver": {"bg": (246, 250, 244), "ink": (24, 44, 32), "sub": (80, 100, 88), "badge": "봄날 수첩 · 부모님 생활 정보", "handle": "@ljw57183800", "scale": 1.15,
                "speakers": {"silver": (46, 110, 78)}, "emblem": "봄"},
     "mom": {"bg": (252, 246, 250), "ink": (52, 30, 60), "sub": (120, 96, 128), "badge": "엄마는 늦깎이 대학생", "handle": "@boxheysoo", "scale": 1.0,
             "speakers": {"mom": (150, 84, 160)}, "emblem": "맘"},
