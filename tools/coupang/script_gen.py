@@ -33,7 +33,7 @@ PROMPT = """너는 「{brand}」 채널의 작가다. 시청자: {audience}. 말
 이 채널은 매일 생활 정보 쇼츠를 올리고, 하루 한 편만 그 정보를 실천할 도구를 소개한다.
 아래 상품으로 15초 세로 영상 대본을 써라.
 
-상품: {name} / {price}원
+상품: {name} / {price}원 (분류: {category})
 특징: {features}
 연계 정보 영상: {linked_topic}
 이번 각도: {angle}
@@ -54,6 +54,8 @@ PROMPT = """너는 「{brand}」 채널의 작가다. 시청자: {audience}. 말
 - 문구 규칙: 느낌표 금지, 긴 줄표 금지, "~이 아니라 ~다" 식 반전 금지, "결과? ~" 식 자문자답 금지.
 - 가상 상황(썰) 형식을 쓰면 is_virtual=true. 구매·사용 경험을 사실처럼 지어내지 않는다 (예: "어머니도 사셨대요" 금지).
 - threads_question은 정답이 여러 개인 경험 질문으로 쓴다 (예: "부모님 댁 욕실, 미끄럼 대비 뭐 해 두셨어요"). 상품을 묻지 않는다.
+- 상품 분류가 '건강기능식품'이면: 특징에 적힌 식약처 인정 기능성 문구만 그대로 쓴다. 질병 이름, 예방, 치료, 개선 체험, '약 대신'을 쓰지 않는다. 섭취 후기를 지어내지 않는다.
+- 봄날 수첩은 부모님 선물을 고르는 자녀에게 말한다("아버지께 드리기 좋은", "부모님 댁에"). 엄마 계정은 직접 쓰는 주부에게 말한다.
 - 마지막 장면은 댓글 키워드 안내다: 댓글에 「{dm_keyword}」 남기면 링크를 DM으로 보내 드린다.
 """
 
@@ -96,7 +98,7 @@ def generate(row: dict, seed: int = 0) -> dict:
             output_config={"effort": "medium", "format": {"type": "json_schema", "schema": SCHEMA}},
             messages=[{"role": "user", "content": PROMPT.format(
                 brand=brand["name"], audience=brand["audience"], voice=brand["voice"],
-                name=row["name"], price=row["price"],
+                name=row["name"], price=row["price"], category=row.get("category", ""),
                 features=row["features"].replace("|", ", ") or "(없음)",
                 linked_topic=row.get("linked_topic") or "(없음)",
                 angle=angle, my_take=row["my_take"] or "(없음)", hooks=_hooks(),

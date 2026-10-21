@@ -11,7 +11,8 @@ import re
 import sys
 from datetime import date, datetime, timedelta
 
-from config import ROOT, BRANDS, DEDUPE_DAYS, DISCLOSURE, HISTORY_FILE, OUT_DIR, PLATFORMS, VIRTUAL_LABEL
+from config import (ROOT, BRANDS, DEDUPE_DAYS, DISCLOSURE, HEALTH_BANNED, HEALTH_CATEGORY, HEALTH_NOTICE,
+                    HISTORY_FILE, OUT_DIR, PLATFORMS, VIRTUAL_LABEL)
 import render
 import script_gen
 
@@ -38,6 +39,8 @@ def build_caption(row: dict, s: dict, platform: str) -> str:
     kw = row.get("dm_keyword") or "링크"
     no = product_no(row)
     virtual = f"\n{VIRTUAL_LABEL}" if s.get("is_virtual") else ""
+    if row.get("category") == HEALTH_CATEGORY:
+        virtual += f"\n{HEALTH_NOTICE}"
     if platform == "instagram":
         return f"{DISCLOSURE}\n\n{s['caption']}{virtual}\n\n댓글에 「{kw}」 남기시면 링크를 DM으로 보내 드려요.\n프로필 링크 {no}번에서도 볼 수 있어요.\n{tags}"
     if platform == "youtube":
@@ -82,7 +85,9 @@ def cmd_build(args) -> None:
             "video": str(item_dir / "short.mp4"),
             "carousel": [str(c) for c in cards],
             "captions": {p: build_caption(row, s, p) for p in PLATFORMS},
-            "pinned_comment": f"{DISCLOSURE}\n구매 링크는 프로필 링크에 있어요.",
+            "pinned_comment": f"{DISCLOSURE}\n구매 링크는 프로필 링크에 있어요."
+                              + (f"\n{HEALTH_NOTICE}" if row.get("category") == HEALTH_CATEGORY else ""),
+            "category": row.get("category", ""),
             "hook_type": s["hook_type"],
             "dm_keyword": row.get("dm_keyword") or "링크",
             "product_no": product_no(row),
@@ -116,6 +121,11 @@ def check(queue: list[dict], day: date) -> list[str]:
         if s.get("is_virtual") and not all(VIRTUAL_LABEL in c for c in q["captions"].values()):
             errors.append(f"{pid}: 가상 상황 표기 누락")
         text = " ".join([s["hook"], *s["points"], s["verdict"], s["title"], s["caption"], s["threads_question"], *s["carousel"]])
+        if q.get("category") == HEALTH_CATEGORY:
+            if not all(HEALTH_NOTICE in c for c in q["captions"].values()):
+                errors.append(f"{pid}: 건강기능식품 고지 누락")
+            if re.search(HEALTH_BANNED, text):
+                errors.append(f"{pid}: 건강기능식품 금지 표현 (질병 예방·치료 등)")
         for pat, label in BANNED:
             if re.search(pat, text):
                 errors.append(f"{pid}: 문구 규칙 위반 ({label})")

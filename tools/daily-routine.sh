@@ -24,6 +24,10 @@ PROMPT=$(cat <<'P'
 [스레드 질문형 글 — 브랜드당 하루 1편, 상품 링크 없음]
 - tools/.venv/bin/python tools/threads_daily.py <내일> → tools/threads_out/<내일>.json 의 글을 createScheduledPost(providers threads만, media 없음)로 예약 → 응답 id로 tools/.venv/bin/python tools/threads_daily.py mark <topic_id> <id>.
 
+[쿠팡 기획전 — tools/coupang/promos.csv]
+- 마감(ends)이 오늘부터 3일 안이고 아직 올리지 않은 기획전이 있으면, 해당 브랜드 스레드에 질문형 글 1편을 내일 09:30(봄날) 또는 10:30(엄마)에 예약한다. 첫 줄은 대가성 문구, 과장·지어낸 경험 금지, "가격·쿠폰은 페이지에서 확인".
+- 예약하면 promos.csv의 해당 줄 angle 칸 끝에 " [게시 YYYY-MM-DD]"를 붙인다.
+
 - 마지막 출력은 정확히 4줄: "만든 것: …" / "실패·재예약: …" / "쿠팡: 예약 n건, 승인 대기 n건(check 실패 사유 요약)" / "막힌 것: …(없으면 없음)".
 P
 )
