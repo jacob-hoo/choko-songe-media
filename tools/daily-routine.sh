@@ -15,6 +15,7 @@ PROMPT=$(cat <<'P'
 - 어제·오늘 게시분에 ERROR가 있으면 그 플랫폼만 20:30·21:30 등 빈 시간에 재예약한다(유튜브는 채널당 하루 6개 이하).
 - 작업: tools/topics.json(CRLF; python json indent=2, "\n"→"\r\n", 끝 줄바꿈 없음) 추가 → tools/.venv/bin/python tools/make_cards.py --only <id> → 카드 PNG 직접 열어 검수 → mp4를 저장소 루트에 복사, git commit(끝줄 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>')·push → raw.githubusercontent.com 200·크기 일치 확인 → createScheduledPost(videoCoverMilliseconds 0, providers youtube·instagram REEL·tiktok·threads, 응답 시각 확인).
 - 출처가 분명한 사실만. 기존 주제와 겹치지 않게.
+- 주제 방향(2026-10-21 대장님 지시): 봄날 수첩은 50대 이상 부모님(특히 남성 건강·생활)과 부모님 선물을 고르는 자녀가 볼 정보, 엄마는 늦깎이 대학생은 공부법 + 주방 정리·청소·문구 활용. 건강 주제는 공공기관 출처만, 질병 예방·치료 단정 금지.
 
 [쿠팡 상품 쇼츠 — 정보 쇼츠가 끝난 뒤. 절차는 ~/.claude/skills/making-coupang-shorts/SKILL.md]
 - 예약: tools/.venv/bin/python tools/coupang/run.py pending 의 항목만 예약한다(대장님이 approve 한 것). mp4를 저장소 루트에 media_name으로 복사·commit·push·raw 200 확인 → 브랜드마다 createScheduledPost를 플랫폼별로 따로 호출(instagram REEL+firstCommentText=pinned_comment, threads, tiktok commercialContentThirdParty=true; 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> threads=<id> tiktok=<id>.
