@@ -5,3 +5,6 @@ __pycache__/
 tools/coupang/out/
 tools/coupang/docs/
 tools/coupang/benchmarks/
+tools/lounge/audio/
+tools/lounge/out/
+tools/lounge/test_audio/
