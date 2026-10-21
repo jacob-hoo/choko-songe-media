@@ -21,6 +21,9 @@ PROMPT=$(cat <<'P'
 - 제작: run.py build (내일 분량) → run.py check <내일>. 실패 항목은 고치지 말고 보고만 한다. approve 는 절대 실행하지 않는다.
 - 상품이 없으면(products.csv 소진) 보고만 한다.
 
+[스레드 질문형 글 — 브랜드당 하루 1편, 상품 링크 없음]
+- tools/.venv/bin/python tools/threads_daily.py <내일> → tools/threads_out/<내일>.json 의 글을 createScheduledPost(providers threads만, media 없음)로 예약 → 응답 id로 tools/.venv/bin/python tools/threads_daily.py mark <topic_id> <id>.
+
 - 마지막 출력은 정확히 4줄: "만든 것: …" / "실패·재예약: …" / "쿠팡: 예약 n건, 승인 대기 n건(check 실패 사유 요약)" / "막힌 것: …(없으면 없음)".
 P
 )
