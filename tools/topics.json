@@ -1077,5 +1077,105 @@
     "body": "가방 챙기고\n입을 옷 꺼내 두고\n아침 메뉴 정해 두기.\n\n아침이 한결\n덜 바빠요.",
     "bubble": "오늘 밤 10분만 써요",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m024-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "따뜻한 인사\n한마디로\n\n하루의 문이\n활짝 열려.",
+    "bubble": "오늘 먼저 인사해요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #024"
+  },
+  {
+    "id": "023-todo-sleep",
+    "type": "one",
+    "title": "잠들기 전 5분\n내일 할 일 적기",
+    "body": "내일 할 일을\n5분 동안 적은 사람이\n\n오늘 한 일을 적은\n사람보다\n평균 9분 빨리 잠들었어요.",
+    "bubble": "메모지 한 장이면 돼요",
+    "speaker": "song-e",
+    "source": "출처: Scullin 외(2018), J. of Experimental Psychology"
+  },
+  {
+    "id": "024-multitask",
+    "type": "list",
+    "title": "일을 왔다 갔다 하면\n시간이 새요",
+    "items": [
+      "일을 바꿀 때마다 다시 집중할 시간이 들어요",
+      "잦은 전환은 일하는 시간의 40%까지 잡아먹어요",
+      "한 번에 한 가지씩 끝내기"
+    ],
+    "bubble": "알림 끄고 하나만 해요",
+    "speaker": "choko",
+    "source": "출처: 미국심리학회(APA), Multitasking: Switching Costs"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s025-electric-blanket",
+    "type": "list",
+    "title": "전기장판\n안전하게 쓰는 법",
+    "items": [
+      "접거나 말아서 쓰지 않기",
+      "위에 무거운 물건 올리지 않기",
+      "외출하거나 잘 땐 온도 낮추거나 끄기",
+      "오래된 제품은 전선 상태 살피기"
+    ],
+    "bubble": "켜기 전에 펴져 있나 봐요",
+    "source": "출처: 한국소비자원·소방청 겨울철 안전 수칙"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s026-phone-discount",
+    "type": "one",
+    "title": "기초연금 받으시면\n휴대폰 요금 감면",
+    "body": "휴대폰 요금을\n한 달 최대\n1만 1천 원 덜 내요.\n\n통신사·주민센터에서\n신청해요.",
+    "bubble": "신청해야 받아요",
+    "source": "출처: 과학기술정보통신부 통신요금 감면 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s027-legal-132",
+    "type": "one",
+    "title": "법률 문제가 생기면\n국번 없이 132",
+    "body": "돈 빌려준 일,\n집 계약, 상속처럼\n\n법을 몰라 막막할 때\n대한법률구조공단에\n무료로 물어볼 수 있어요.",
+    "bubble": "혼자 고민하지 마세요",
+    "source": "출처: 대한법률구조공단 132 법률상담"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h025-interleave",
+    "type": "one",
+    "title": "수학 문제는\n섞어서 풀어요",
+    "body": "한 유형만 몰아 푼 반보다\n여러 유형을 섞어 푼 반이\n\n일주일 뒤 시험에서\n세 배 넘게 맞혔어요.\n(63% 대 20%)",
+    "bubble": "오늘은 섞어서 풀어요",
+    "source": "출처: Rohrer·Taylor(2007), Instructional Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h026-door-basket",
+    "type": "list",
+    "title": "현관 앞\n'나가는 바구니'",
+    "items": [
+      "열쇠·교통카드·마스크 한곳에",
+      "반납할 도서관 책도 여기에",
+      "아이 준비물은 전날 밤 넣기"
+    ],
+    "bubble": "나갈 땐 바구니만 봐요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h027-teach",
+    "type": "one",
+    "title": "가르친다 생각하고\n공부해요",
+    "body": "나중에 남에게\n가르칠 거라 생각하고\n공부한 사람이\n\n시험만 본다고 생각한\n사람보다 더 많이\n기억했어요.",
+    "bubble": "아이에게 설명해 봐요",
+    "source": "출처: Nestojko 외(2014), Memory & Cognition"
   }
 ]
