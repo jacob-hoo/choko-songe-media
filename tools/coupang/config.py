@@ -10,7 +10,7 @@ DISCLOSURE_SHORT = "광고 · 쿠팡파트너스 수수료 제공"
 DEDUPE_DAYS = 7
 
 # 기존 매일 게시 브랜드 (Metricool 제이콥 계정). mrjacobhoo(7204756)는 GPT 담당이라 넣지 않는다.
-# coupang_slot: 기존 정보 쇼츠 3편(오전·오후·저녁) 뒤에 붙는 상품 슬롯. 브랜드당 하루 1편.
+# coupang_slot: 브랜드당 하루 1편. 2026-10-21 Metricool 최적 시간 분석(10시·18시 정점, 21시는 10시의 1/4)으로 21시대에서 18시대로 옮김.
 BRANDS = {
     "bomnal": {
         "brand_id": "7435746",
@@ -19,7 +19,7 @@ BRANDS = {
         "voice": "자녀가 부모님 선물을 고르는 시선. 존댓말, 짧은 문장, '~해요' 체. '부모님께 드리기 좋은', '아버지 선물'처럼 선물 맥락을 앞에 둔다.",
         "niche": "50대 이상 건강기능식품(식약처 인정 기능성만), 50대 이상 남성 생활·그루밍 선물, 생활 안전 효도템",
         "hashtags": ["#봄날수첩", "#부모님선물", "#아버지선물", "#효도템"],
-        "coupang_slot": "21:00",
+        "coupang_slot": "18:00",
         "youtube_category": "HOWTO_STYLE",
     },
     "mom": {
@@ -29,7 +29,7 @@ BRANDS = {
         "voice": "다정한 1인칭 엄마 화자, '~해요' 체, 이모지 1개 이내.",
         "niche": "특이한 학용품, 주방 정리, 청소 도구",
         "hashtags": ["#엄마는늦깎이대학생", "#주방정리", "#청소템", "#문구추천"],
-        "coupang_slot": "21:30",
+        "coupang_slot": "18:30",
         "youtube_category": "HOWTO_STYLE",
     },
 }

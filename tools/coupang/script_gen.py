@@ -10,7 +10,7 @@ import random
 from config import BRANDS, CLAUDE_MODEL, ROOT
 
 HOOKS_FILE = ROOT / "hooks.md"
-ANGLES = ["어제 영상의 실천 도구", "부모님 집 점검", "이 가격에 이 기능", "써보고 아쉬운 점", "고르는 기준 3가지", "시간 절약"]
+ANGLES = ["지난 정보 영상의 실천 도구", "부모님 집 점검", "이 가격에 이 기능", "맞지 않는 사람", "고르는 기준 3가지", "시간 절약"]
 
 SCHEMA = {
     "type": "object",
@@ -68,11 +68,22 @@ def _template(row: dict, angle: str) -> dict:
     feats = [f for f in row["features"].split("|") if f] or ["사용 편의성", "가격", "보관"]
     price = int(row["price"]) if row["price"].isdigit() else 0
     topic = row.get("linked_topic") or row["name"]
+    # 첫 문장이 매번 같으면 넘겨진다. 상품마다 다른 문장을 고르되 사실만 쓴다("어제 영상"처럼 날짜를 단정하지 않는다).
+    t = row.get("linked_topic", "")
+    hooks = {"건강기능식품": ["부모님 선물, 이 기준으로", "부모님 영양제 고르는 기준"],
+             "남성선물": ["아버지 선물 고르는 기준", "아버지께 드리기 좋은 것"],
+             "공부템": ["책상 위에 하나 두면", "공부 시간 지키는 도구"],
+             "특이한문구": ["책상 위에 하나 두면", "필통에 하나 넣어 두면"],
+             "주방정리": ["주방 정리, 이 기준으로", "싱크대 아래 정리 기준"],
+             "청소": ["청소 시간 줄이는 도구", "살림 시간 줄이는 도구"],
+             }.get(row["category"], ["부모님 댁에 두면 좋은 것"] if row["brand"] == "bomnal" else ["살림 시간 줄이는 도구"])
+    if t and len(t) <= 12:
+        hooks = [f"{t}, 이걸로 해요"]
     return {
         "hook_type": "연계 정보 되짚기",
         "is_virtual": False,
-        "hook": "어제 영상, 이걸로 해요",
-        "points": (feats + ["직접 비교했어요"] * 3)[:3],
+        "hook": random.Random(row["product_id"]).choice(hooks),
+        "points": (feats + ["상세 페이지에서 크기 확인"] * 3)[:3],
         "verdict": row["my_take"] or "설치가 어려우면 자녀와 같이 해요",
         "threads_question": f"{topic}, 다들 어떻게 하고 계세요",
         "title": f"{topic}, 이렇게 실천해요 {row['name']}",

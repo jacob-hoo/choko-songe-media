@@ -18,8 +18,14 @@ PROMPT=$(cat <<'P'
 - 주제 방향(2026-10-21 대장님 지시): 봄날 수첩은 50대 이상 부모님(특히 남성 건강·생활)과 부모님 선물을 고르는 자녀가 볼 정보, 엄마는 늦깎이 대학생은 공부법 + 주방 정리·청소·문구 활용. 건강 주제는 공공기관 출처만, 질병 예방·치료 단정 금지.
 
 [쿠팡 상품 쇼츠 — 정보 쇼츠가 끝난 뒤. 절차는 ~/.claude/skills/making-coupang-shorts/SKILL.md]
-- 예약: tools/.venv/bin/python tools/coupang/run.py pending 의 항목만 예약한다(대장님이 approve 한 것). mp4를 저장소 루트에 media_name으로 복사·commit·push·raw 200 확인 → 브랜드마다 createScheduledPost를 플랫폼별로 따로 호출(instagram REEL+firstCommentText=pinned_comment, threads, tiktok commercialContentThirdParty=true; 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> threads=<id> tiktok=<id>.
-- 제작: run.py build (내일 분량) → run.py check <내일>. 실패 항목은 고치지 말고 보고만 한다. approve 는 절대 실행하지 않는다.
+- 대장님 상시 승인(2026-10-21): 클이사가 검수·승인·예약까지 한다. 순서는 제작 → 검수 → 승인 → 예약.
+- 제작: tools/.venv/bin/python tools/coupang/run.py build (내일 분량) → run.py check <내일>.
+- 검수(클이사 직접): out/<내일>/queue.json 의 캡션·스레드·고정 댓글을 읽고, mp4 첫·마지막 장면(ffmpeg로 프레임 추출)과 캐러셀 jpg를 직접 열어 본다.
+  다음 중 하나라도 걸리면 그 상품은 고친 뒤 다시 build --force, 고칠 수 없으면 승인하지 않고 보고한다:
+  products.csv 특징 칸에 없는 효능·스펙, 지어낸 경험, 질병 이름·치료·예방 단정, 대가성 문구 누락, 가격 표기 오류, 화면 글자 잘림, 다른 브랜드 말투.
+  my_take 가 비어 있으면 특징 칸 사실만으로 한 줄(맞는 사람 + 확인할 점)을 써 넣는다. 써 보지 않은 체험은 쓰지 않는다.
+- 승인: 검수를 통과하면 run.py approve <내일>.
+- 예약: run.py pending 의 항목 → mp4·캐러셀 jpg를 저장소 루트에 복사·commit·push·raw 200 확인 → 브랜드마다 플랫폼별로 createScheduledPost(instagram TRIAL_REEL+firstCommentText=pinned_comment, instagram 캐러셀 POST 봄날 11:00/엄마 11:30, threads, tiktok commercialContentThirdParty=true; 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> carousel=<id> threads=<id> tiktok=<id>.
 - 상품이 없으면(products.csv 소진) 보고만 한다.
 
 [스레드 질문형 글 — 브랜드당 하루 1편, 상품 링크 없음]
@@ -32,7 +38,14 @@ PROMPT=$(cat <<'P'
 [정보 캐러셀 — 내일이 월요일 또는 목요일일 때만, 브랜드당 1편]
 - tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
 
-- 마지막 출력은 정확히 4줄: "만든 것: …" / "실패·재예약: …" / "쿠팡: 예약 n건, 승인 대기 n건(check 실패 사유 요약)" / "막힌 것: …(없으면 없음)".
+[주간 성과 분석 — 오늘이 월요일일 때만. 절차는 ~/.claude/skills/optimizing-shorts-performance/SKILL.md]
+- 봄날 7435746·엄마 7435751의 지난 7일 getAnalyticsDataByMetrics: 인스타 릴스(IGRE02,03,11,23,12,21,24,28), 인스타 게시물·캐러셀, 스레드(THPO02,03,08,09,10,11), 틱톡(TKPO02,05,07,13,15,16).
+- getBestTimeToPostByNetwork(instagram, tiktok) 로 시간대를 다시 본다.
+- 쿠팡 상품 게시물(cp-)과 정보 게시물을 나눠 도달·3초 시청률·평균 시청·저장·공유 상위/하위 3개를 뽑고, hooks.md '성과 기록'에 hook_type별 한 줄씩 남긴다.
+- 결과와 다음 주 바꿀 것 3가지(상품 순서, 훅 유형, 시간대 중)를 ~/NODE-JUN-Vault/50_공통업무/프로젝트/부업/주간 성과.md 맨 위에 날짜 제목으로 추가한다. 저장소에는 올리지 않는다.
+- 바꿀 것 중 규칙 안에서 바로 할 수 있는 것(상품 순서 바꾸기, hooks.md 갱신)은 바로 하고, 슬롯 시간·예산이 드는 것은 보고의 "막힌 것"이 아니라 "쿠팡" 줄 뒤에 "제안: …"으로 붙인다.
+
+- 마지막 출력은 정확히 4줄: "만든 것: …" / "실패·재예약: …" / "쿠팡: 예약 n건, 검수 보류 n건(사유 요약)" / "막힌 것: …(없으면 없음)".
 P
 )
 
@@ -40,7 +53,7 @@ P
   echo "=== $(date '+%F %T') 시작"
   timeout 3600 "$HOME/.local/bin/claude" -p "$PROMPT" \
     --permission-mode auto \
-    --allowedTools "Read,Write,Edit,Glob,Grep,Bash,mcp__claude_ai_Metricool_Social_Media_Management__getScheduledPosts,mcp__claude_ai_Metricool_Social_Media_Management__createScheduledPost" \
+    --allowedTools "Read,Write,Edit,Glob,Grep,Bash,mcp__claude_ai_Metricool_Social_Media_Management__getScheduledPosts,mcp__claude_ai_Metricool_Social_Media_Management__createScheduledPost,mcp__claude_ai_Metricool_Social_Media_Management__getAnalyticsDataByMetrics,mcp__claude_ai_Metricool_Social_Media_Management__getBestTimeToPostByNetwork" \
     --output-format text
   echo "=== $(date '+%F %T') 끝 (exit $?)"
 } >"$LOG" 2>&1

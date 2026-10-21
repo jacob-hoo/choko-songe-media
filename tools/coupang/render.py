@@ -105,6 +105,13 @@ def _card(headline: str, sub: str, idx: int, total: int, img: Image.Image | None
     return im
 
 
+def _motion() -> str:
+    """장면마다 천천히 다가가는 화면(위쪽 고정: 대가성 띠가 잘리지 않게). 멈춘 화면은 첫 1초에 넘겨진다(2026-10-21 기준선: 평균 시청 1.3~4초)."""
+    frames = int(SCENE_SEC * 30)
+    return (f"scale={W * 2}:{H * 2},zoompan=z='min(zoom+0.0008,1.04)':d={frames}"
+            f":x='iw/2-(iw/zoom/2)':y=0:s={W}x{H}:fps=30,format=yuv420p")
+
+
 def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     img = _product_image(row.get("image", ""))
     price = f"{int(row['price']):,}원" if row["price"].isdigit() else ""
@@ -117,7 +124,7 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
             _frame(head, sub, i, len(scenes), img, pr, footer=BRANDS[row['brand']]['name']).save(f"{tmp}/{i:02d}.png")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-framerate", f"1/{SCENE_SEC}",
                "-i", f"{tmp}/%02d.png", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
-               "-shortest", "-vf", "fps=30,format=yuv420p", "-c:v", "libx264",
+               "-shortest", "-vf", _motion(), "-c:v", "libx264",
                "-c:a", "aac", "-movflags", "+faststart", str(out_mp4)]
         subprocess.run(cmd, check=True)
 
