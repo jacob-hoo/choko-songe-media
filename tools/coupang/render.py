@@ -112,6 +112,14 @@ def _motion() -> str:
             f":x='iw/2-(iw/zoom/2)':y=0:s={W}x{H}:fps=30,format=yuv420p")
 
 
+def _chime(seconds: float) -> str:
+    """장면이 바뀔 때마다 짧은 맑은 소리(직접 합성, 저작권 없음). 무음 영상은 소리 켠 시청자가 바로 넘긴다."""
+    k = SCENE_SEC
+    expr = (f"0.10*sin(2*PI*880*t)*exp(-7*mod(t\\,{k}))"
+            f"+0.05*sin(2*PI*1318.5*t)*exp(-9*mod(t\\,{k}))")
+    return f"aevalsrc=exprs={expr}|{expr}:s=44100:d={seconds}"
+
+
 def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     img = _product_image(row.get("image", ""))
     price = f"{int(row['price']):,}원" if row["price"].isdigit() else ""
@@ -123,7 +131,7 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
         for i, (head, sub, pr) in enumerate(scenes):
             _frame(head, sub, i, len(scenes), img, pr, footer=BRANDS[row['brand']]['name']).save(f"{tmp}/{i:02d}.png")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-framerate", f"1/{SCENE_SEC}",
-               "-i", f"{tmp}/%02d.png", "-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo",
+               "-i", f"{tmp}/%02d.png", "-f", "lavfi", "-i", _chime(len(scenes) * SCENE_SEC),
                "-shortest", "-vf", _motion(), "-c:v", "libx264",
                "-c:a", "aac", "-movflags", "+faststart", str(out_mp4)]
         subprocess.run(cmd, check=True)
@@ -146,7 +154,7 @@ def render_carousel(row: dict, script: dict, out_dir: Path) -> list[Path]:
         (pts[1], "", None, ""),
         (script["verdict"], "이런 분께 맞아요", None, price),
         ((f"댓글에 「{kw}」", f"DM으로 링크를 보내 드려요 · 프로필 {no}번", None, "") if DM_ENABLED
-         else (f"프로필 링크 {no}번", "제품 모음에서 바로 볼 수 있어요", None, "")),
+         else (f"프로필 링크 {no}번", "저장해 두면 필요할 때 다시 볼 수 있어요", None, "")),
     ]
     paths = []
     for i, (head, sub, im, pr) in enumerate(pages):
