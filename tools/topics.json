@@ -1177,5 +1177,108 @@
     "body": "나중에 남에게\n가르칠 거라 생각하고\n공부한 사람이\n\n시험만 본다고 생각한\n사람보다 더 많이\n기억했어요.",
     "bubble": "아이에게 설명해 봐요",
     "source": "출처: Nestojko 외(2014), Memory & Cognition"
+  },
+  {
+    "id": "m025-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "창문을 열면\n바람이 먼저\n\n안부를\n물어 와.",
+    "bubble": "창문 한 번 열어 봐요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #025"
+  },
+  {
+    "id": "025-spend-others",
+    "type": "one",
+    "title": "같은 돈이라도\n남을 위해 써 보세요",
+    "body": "받은 돈을\n남을 위해 쓴 사람이\n\n나를 위해 쓴 사람보다\n그날 저녁\n더 행복하다고 답했어요.",
+    "bubble": "작은 선물 하나면 돼요",
+    "speaker": "song-e",
+    "source": "출처: Dunn 외(2008), Science"
+  },
+  {
+    "id": "026-sns-30",
+    "type": "list",
+    "title": "SNS를 하루 30분으로\n줄여 봤더니",
+    "items": [
+      "앱마다 하루 10분씩만 썼어요",
+      "3주 동안 이어 갔어요",
+      "외로움을 덜 느꼈다고 답했어요"
+    ],
+    "bubble": "알림부터 꺼 봐요",
+    "speaker": "choko",
+    "source": "출처: Hunt 외(2018), J. of Social and Clinical Psychology"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s028-license-75",
+    "type": "one",
+    "title": "75세부터\n운전면허 갱신 3년마다",
+    "body": "갱신하기 전에\n교통안전교육을\n먼저 받아야 해요.\n\n도로교통공단에\n미리 예약해요.",
+    "bubble": "면허증 날짜 같이 봐요",
+    "source": "출처: 도로교통공단 고령운전자 교통안전교육"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s029-hfood-gift",
+    "type": "list",
+    "title": "건강기능식품 선물\n고를 때 볼 3가지",
+    "items": [
+      "'건강기능식품' 문구와 인증 마크",
+      "하루 섭취량과 주의사항",
+      "드시는 약과 같이 드셔도 되는지"
+    ],
+    "bubble": "식품안전나라에서 조회돼요",
+    "source": "출처: 식품의약품안전처"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s030-waist-90",
+    "type": "one",
+    "title": "아버지 허리둘레\n90cm 넘으세요?",
+    "body": "남성 90cm,\n여성 85cm 이상이면\n복부비만으로 봐요.\n\n건강검진 결과표에\n적혀 있어요.",
+    "bubble": "결과표부터 같이 봐요",
+    "source": "출처: 질병관리청 국가건강정보포털"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h028-highlighter",
+    "type": "one",
+    "title": "형광펜만 칠하면\n아쉬워요",
+    "body": "밑줄·형광펜 칠하기는\n효과가 낮은 공부법으로\n평가됐어요.\n\n칠한 곳은 덮고\n떠올려 봐요.",
+    "bubble": "칠한 뒤엔 꼭 퀴즈",
+    "source": "출처: Dunlosky 외(2013), 공부법 10가지 비교 연구"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h029-cutting-board",
+    "type": "list",
+    "title": "칼·도마는\n나눠 써요",
+    "items": [
+      "채소용·고기용·생선용 따로 쓰기",
+      "하나뿐이면 채소→고기→생선 순서",
+      "다른 재료 전엔 깨끗이 씻기"
+    ],
+    "bubble": "도마에 색 스티커 붙여요",
+    "source": "출처: 식품의약품안전처 '손보구가세' 수칙"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h030-microwave",
+    "type": "list",
+    "title": "전자레인지 청소\n물 한 그릇이면 돼요",
+    "items": [
+      "내열 그릇에 물과 식초 조금",
+      "2~3분 돌리고 문 닫은 채 잠깐 두기",
+      "김 서린 안쪽을 행주로 닦기"
+    ],
+    "bubble": "공부 쉬는 5분이면 끝",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
