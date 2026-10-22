@@ -38,6 +38,11 @@ PROMPT=$(cat <<'P'
 [정보 캐러셀 — 내일이 월요일 또는 목요일일 때만, 브랜드당 1편]
 - tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
 
+[초코송이 라운지 곡 공개 — 매일, 대장님 지시: "음원 전체를 순차적으로 공개 업로드", "하루 3곡씩"(2026-10-23)]
+- tools/.venv/bin/python tools/lounge/singles.py next --days 7 → 항목마다 초코송이(7435740) 유튜브에만 createScheduledPost 한 건: date+time(KST), media=single_url, youtubeData type "video", title=yt_title, category MUSIC, privacy public, madeForKids false, isAiGeneratedContent true, text=description, tags 초코송이·초코송이라운지·연주곡
+  → tools/.venv/bin/python tools/lounge/singles.py mark <track_id> single=<id>. release_queue.json 은 commit·push.
+- 곡 쇼츠는 올리지 않는다. 초코송이 유튜브 하루 6개 = 카드 쇼츠 3 + 곡 3(롱폼 공개일은 롱폼 1 + 곡 2).
+
 [주간 성과 분석 — 오늘이 월요일일 때만. 절차는 ~/.claude/skills/optimizing-shorts-performance/SKILL.md]
 - 봄날 7435746·엄마 7435751의 지난 7일 getAnalyticsDataByMetrics: 인스타 릴스(IGRE02,03,11,23,12,21,24,28), 인스타 게시물·캐러셀, 스레드(THPO02,03,08,09,10,11), 틱톡(TKPO02,05,07,13,15,16).
 - getBestTimeToPostByNetwork(instagram, tiktok) 로 시간대를 다시 본다.

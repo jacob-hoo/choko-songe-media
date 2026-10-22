@@ -29,7 +29,7 @@ FONT_B = "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc"
 FONT_R = "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc"
 XFADE = 3.0  # 곡 사이 겹침(초)
 CHANNEL = "초코송이 라운지"
-AI_NOTE = ("음악은 AI 작곡 도구 Suno(유료 플랜)로 만들고, 초코송이가 직접 듣고 골라 편집했어요. "
+AI_NOTE = ("음악은 AI 작곡 도구 Suno(유료 플랜)로 만든 연주곡을 골라 이어 붙였어요. (AI 생성 음악) "
            "영상 속 초코와 송이는 초코송이의 캐릭터입니다.")
 FIELDS = ["track_id", "scene_id", "title", "file", "seconds", "selected", "source", "notes"]
 
