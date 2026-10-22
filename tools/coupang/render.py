@@ -1,11 +1,15 @@
 """대본 → 세로 영상(mp4) + 인스타 캐러셀(png)."""
 import subprocess
+import sys
 import tempfile
 import textwrap
 import urllib.request
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import bgm  # noqa: E402  공용 배경음악
 
 from config import (ACCENT, BG, BRANDS, DISCLOSURE_SHORT, DM_ENABLED, FONT_BOLD, FONT_REG,
                     H, INK, SCENE_SEC, W)
@@ -127,12 +131,18 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     scenes += [(p, "", "") for p in script["points"]]
     scenes += [(script["verdict"], "", price), ((f"댓글에 「{row.get('dm_keyword') or '링크'}」", f"DM 링크 · 프로필 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "")
                if DM_ENABLED else (f"프로필 링크 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "제품 모음에서 보세요", ""))]
+    # 공용 배경음악(Suno). 없으면 장면 전환 효과음.
+    track = bgm.pick(row["brand"], row["product_id"])
+    if track:
+        audio_in, af = bgm.ffmpeg_audio_args(track, len(scenes) * SCENE_SEC)
+    else:
+        audio_in, af = ["-f", "lavfi", "-i", _chime(len(scenes) * SCENE_SEC)], "anull"
     with tempfile.TemporaryDirectory() as tmp:
         for i, (head, sub, pr) in enumerate(scenes):
             _frame(head, sub, i, len(scenes), img, pr, footer=BRANDS[row['brand']]['name']).save(f"{tmp}/{i:02d}.png")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-framerate", f"1/{SCENE_SEC}",
-               "-i", f"{tmp}/%02d.png", "-f", "lavfi", "-i", _chime(len(scenes) * SCENE_SEC),
-               "-shortest", "-vf", _motion(), "-c:v", "libx264",
+               "-i", f"{tmp}/%02d.png", *audio_in,
+               "-shortest", "-vf", _motion(), "-af", af, "-c:v", "libx264",
                "-c:a", "aac", "-movflags", "+faststart", str(out_mp4)]
         subprocess.run(cmd, check=True)
 

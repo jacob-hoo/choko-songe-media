@@ -191,12 +191,17 @@ def render(t):
     return img
 
 
-def to_video(png, mp4):
+def to_video(png, mp4, brand="choko", seed=""):
     """정지 카드에 아주 느린 줌을 넣은 7초 세로 영상.
-    소리: music/calm-cdfg.wav(make_music.py 자체 합성 음원)가 있으면 그것, 없으면 무음 트랙."""
+    소리: 공용 배경음악(music/manifest.json, Suno Premier)에서 브랜드에 맞는 곡. 없으면 자체 합성 음원, 그것도 없으면 무음."""
+    from bgm import ffmpeg_audio_args, pick
     ff = imageio_ffmpeg.get_ffmpeg_exe()
+    track = pick(brand, seed or png.stem)
     music = ROOT / "music" / "calm-cdfg.wav"
-    audio_in = ["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]
+    if track:
+        audio_in, af = ffmpeg_audio_args(track, VIDEO_SECONDS)
+    else:
+        audio_in, af = (["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]), "anull"
     frames = VIDEO_SECONDS * 30
     vf = (
         f"scale=2160:3840,zoompan=z='min(zoom+0.0003,1.04)':d={frames}"
@@ -206,7 +211,7 @@ def to_video(png, mp4):
         ff, "-y", "-loglevel", "error",
         "-loop", "1", "-i", str(png),
         *audio_in,
-        "-vf", vf, "-t", str(VIDEO_SECONDS),
+        "-vf", vf, "-af", af, "-t", str(VIDEO_SECONDS),
         "-c:v", "libx264", "-preset", "medium", "-crf", "18",
         "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart",
         str(mp4),
@@ -227,7 +232,7 @@ def main():
         png = OUT / f"{t['id']}.png"
         render(t).save(png)
         if not args.no_video:
-            to_video(png, OUT / f"{t['id']}.mp4")
+            to_video(png, OUT / f"{t['id']}.mp4", t.get("brand", "choko"), t["id"])
         print("ok", t["id"])
 
 

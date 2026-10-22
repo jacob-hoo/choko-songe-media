@@ -1,0 +1,611 @@
+{
+  "source": "Suno Premier (mrjacobhoo@gmail.com), 2026-10-22 생성, 상업 이용 가능(유료 플랜 생성분)",
+  "rules": [
+    "모든 브랜드 공용 배경음악. 출처 표기 불필요하나 유튜브는 AI 음악 사용 고지",
+    "곡을 그대로 단독 음원으로 재판매·배포하지 않는다",
+    "한 영상에 한 곡, 앞부분 대신 곡의 35% 지점부터 쓰면 반복감이 줄어든다"
+  ],
+  "count": 60,
+  "tracks": [
+    {
+      "file": "music/exam-night/en-00f29799.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 159.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-00f29799.mp3"
+    },
+    {
+      "file": "music/exam-night/en-0bc7dcba.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 171.7,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-0bc7dcba.mp3"
+    },
+    {
+      "file": "music/exam-night/en-27032f8a.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 153.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-27032f8a.mp3"
+    },
+    {
+      "file": "music/exam-night/en-2c56ffe2.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 172.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-2c56ffe2.mp3"
+    },
+    {
+      "file": "music/exam-night/en-2cd43bc9.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 174.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-2cd43bc9.mp3"
+    },
+    {
+      "file": "music/exam-night/en-37c79e18.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 152.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-37c79e18.mp3"
+    },
+    {
+      "file": "music/exam-night/en-397a46f3.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 188.5,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-397a46f3.mp3"
+    },
+    {
+      "file": "music/exam-night/en-4920f44c.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 190.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-4920f44c.mp3"
+    },
+    {
+      "file": "music/exam-night/en-59a24fcf.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 158.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-59a24fcf.mp3"
+    },
+    {
+      "file": "music/exam-night/en-6c4eed01.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 159.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-6c4eed01.mp3"
+    },
+    {
+      "file": "music/exam-night/en-6f711577.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 157.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-6f711577.mp3"
+    },
+    {
+      "file": "music/exam-night/en-8592c8ff.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 170.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-8592c8ff.mp3"
+    },
+    {
+      "file": "music/exam-night/en-8f325463.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 170.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-8f325463.mp3"
+    },
+    {
+      "file": "music/exam-night/en-ac7f010e.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 184.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-ac7f010e.mp3"
+    },
+    {
+      "file": "music/exam-night/en-b3a24438.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 148.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-b3a24438.mp3"
+    },
+    {
+      "file": "music/exam-night/en-b75bcd3e.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 182.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-b75bcd3e.mp3"
+    },
+    {
+      "file": "music/exam-night/en-bbc433eb.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 158.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-bbc433eb.mp3"
+    },
+    {
+      "file": "music/exam-night/en-c8caf933.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 159.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-c8caf933.mp3"
+    },
+    {
+      "file": "music/exam-night/en-d316b629.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 167.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-d316b629.mp3"
+    },
+    {
+      "file": "music/exam-night/en-e889d9d1.mp3",
+      "scene": "exam-night",
+      "mood": "calm",
+      "genre": "solo piano",
+      "bpm": 64,
+      "use": "공부·집중, 차분한 정보",
+      "seconds": 182.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/exam-night/en-e889d9d1.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-0749472f.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 202.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-0749472f.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-09577f1e.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 183.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-09577f1e.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-10c4408e.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 194.5,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-10c4408e.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-22303c7a.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 189.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-22303c7a.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-2fda95a7.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 195.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-2fda95a7.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-3f93a358.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 183.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-3f93a358.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-52a6da05.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 202.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-52a6da05.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-5a73fe21.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 198.5,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-5a73fe21.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-5d6016b4.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 187.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-5d6016b4.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-5f2b5147.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 212.3,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-5f2b5147.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-602c938c.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 182.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-602c938c.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-8d33ec44.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 182.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-8d33ec44.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-8fe1f2ea.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 202.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-8fe1f2ea.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-aef928e0.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 203.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-aef928e0.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-b13e0ade.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 194.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-b13e0ade.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-b39b301e.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 183.1,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-b39b301e.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-e1b492b5.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 210.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-e1b492b5.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-e8222198.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 198.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-e8222198.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-f4f699b3.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 162.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-f4f699b3.mp3"
+    },
+    {
+      "file": "music/rain-cafe/rc-fab7fef2.mp3",
+      "scene": "rain-cafe",
+      "mood": "cozy",
+      "genre": "lofi jazz",
+      "bpm": 72,
+      "use": "살림·작업, 상품 소개",
+      "seconds": 143.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/rain-cafe/rc-fab7fef2.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-0126b59b.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 207.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-0126b59b.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-014e287d.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 163.5,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-014e287d.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-0422af08.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 198.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-0422af08.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-051d3b82.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 153.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-051d3b82.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-0e768234.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 173.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-0e768234.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-0eab4e3c.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 186.9,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-0eab4e3c.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-1c811c73.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 193.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-1c811c73.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-1e1d5f08.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 213.1,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-1e1d5f08.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-2881ab51.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 202.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-2881ab51.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-376b2603.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 203.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-376b2603.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-678718c2.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 203.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-678718c2.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-79534921.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 190.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-79534921.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-7b919816.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 189.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-7b919816.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-888f720c.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 194.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-888f720c.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-92ad3ced.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 198.4,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-92ad3ced.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-b2932690.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 188.0,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-b2932690.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-befc8684.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 198.8,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-befc8684.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-d50b3f7c.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 193.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-d50b3f7c.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-edd0c38b.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 213.6,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-edd0c38b.mp3"
+    },
+    {
+      "file": "music/snow-night/sn-ef26d06d.mp3",
+      "scene": "snow-night",
+      "mood": "sleep",
+      "genre": "music box ambient",
+      "bpm": 50,
+      "use": "수면·휴식, 감성",
+      "seconds": 199.2,
+      "raw_url": "https://raw.githubusercontent.com/jacob-hoo/choko-songe-media/main/music/snow-night/sn-ef26d06d.mp3"
+    }
+  ]
+}
