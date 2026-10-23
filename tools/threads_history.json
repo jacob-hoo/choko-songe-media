@@ -4,5 +4,7 @@
   "s002-7000-steps": "skip-health-rule-2026-10-21",
   "s003-dementia": "skip-health-rule-2026-10-21",
   "s004-fall": "402695562",
-  "h002-grocery": "402695573"
+  "h002-grocery": "402695573",
+  "s005-phone-font": "403706633",
+  "h003-ai-homework": "403706651"
 }
