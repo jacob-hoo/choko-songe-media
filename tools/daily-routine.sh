@@ -25,7 +25,7 @@ PROMPT=$(cat <<'P'
   products.csv 특징 칸에 없는 효능·스펙, 지어낸 경험, 질병 이름·치료·예방 단정, 대가성 문구 누락, 가격 표기 오류, 화면 글자 잘림, 다른 브랜드 말투.
   my_take 가 비어 있으면 특징 칸 사실만으로 한 줄(맞는 사람 + 확인할 점)을 써 넣는다. 써 보지 않은 체험은 쓰지 않는다.
 - 승인: 검수를 통과하면 run.py approve <내일>.
-- 예약: run.py pending 의 항목 → mp4·캐러셀 jpg를 저장소 루트에 복사·commit·push·raw 200 확인 → 브랜드마다 플랫폼별로 createScheduledPost(instagram TRIAL_REEL+firstCommentText=pinned_comment, instagram 캐러셀 POST 봄날 11:00/엄마 11:30, 같은 시각 tiktok 사진 캐러셀(같은 jpg 5장, tiktokData autoAddMusic=true·commercialContentThirdParty=true), threads, tiktok 영상 commercialContentThirdParty=true(autoAddMusic는 영상에 쓰면 400 오류); 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> carousel=<id> tiktok_photo=<id> threads=<id> tiktok=<id>.
+- 예약: run.py pending 의 항목 → mp4·캐러셀 jpg를 저장소 루트에 복사·commit·push·raw 200 확인 → 브랜드마다 플랫폼별로 createScheduledPost(instagram REEL(showReelOnFeed=true, 체험 릴스는 팔로워 요건 미달로 실패해 쓰지 않음)+firstCommentText=pinned_comment, instagram 캐러셀 POST 봄날 11:00/엄마 11:30, 같은 시각 tiktok 사진 캐러셀(같은 jpg 5장, tiktokData autoAddMusic=true·commercialContentThirdParty=true), threads, tiktok 영상 commercialContentThirdParty=true(autoAddMusic는 영상에 쓰면 400 오류); 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> carousel=<id> tiktok_photo=<id> threads=<id> tiktok=<id>.
 - 상품이 없으면(products.csv 소진) 보고만 한다.
 
 [스레드 질문형 글 — 브랜드당 하루 1편, 상품 링크 없음]
