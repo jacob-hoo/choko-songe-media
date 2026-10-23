@@ -1280,5 +1280,108 @@
     ],
     "bubble": "공부 쉬는 5분이면 끝",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m026-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "따뜻한 차 한 잔\n식는 동안\n\n마음도 천천히\n쉬어 가.",
+    "bubble": "차 한 잔 하고 가요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #026"
+  },
+  {
+    "id": "027-doorway",
+    "type": "one",
+    "title": "방에 들어오면\n왜 왔는지 잊는 이유",
+    "body": "문을 지나 다른 방으로\n옮겨 간 사람이\n\n같은 거리를 한 방 안에서\n걸은 사람보다\n더 많이 잊었어요.",
+    "bubble": "왔던 방으로 돌아가 봐요",
+    "speaker": "song-e",
+    "source": "출처: Radvansky 외(2011), Q. J. of Experimental Psychology"
+  },
+  {
+    "id": "028-fresh-start",
+    "type": "list",
+    "title": "새로 시작하기 좋은 날\n따로 있어요",
+    "items": [
+      "한 주·한 달이 시작되는 날",
+      "생일이 지난 다음 날",
+      "이런 날 헬스장에 더 많이 갔어요"
+    ],
+    "bubble": "월요일에 시작해 봐요",
+    "speaker": "choko",
+    "source": "출처: Dai·Milkman·Riis(2014), Management Science"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s031-colon-screening",
+    "type": "one",
+    "title": "50세부터\n대장암 검진은 해마다",
+    "body": "만 50세 이상은\n해마다 분변잠혈검사를\n국가암검진으로 받아요.\n\n건강보험공단에서\n대상인지 조회돼요.",
+    "bubble": "올해 받으셨나 여쭤봐요",
+    "source": "출처: 국립암센터·국민건강보험공단 국가암검진"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s032-retire-consult",
+    "type": "one",
+    "title": "노후 준비 상담\n국민연금공단에서 무료",
+    "body": "재무·건강·여가·\n대인관계까지\n같이 살펴 줘요.\n\n국번 없이 1355에\n물어보세요.",
+    "bubble": "은퇴 전에 한 번 받아 봐요",
+    "source": "출처: 국민연금공단 노후준비서비스"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s033-hiking-safety",
+    "type": "list",
+    "title": "가을 산행\n안전 수칙 3가지",
+    "items": [
+      "해 지기 2시간 전엔 내려오기",
+      "혼자보다 일행과 함께",
+      "출발 전 날씨·코스 확인"
+    ],
+    "bubble": "등산 전에 보내 드려요",
+    "source": "출처: 산림청 안전산행 수칙"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h031-pretest",
+    "type": "one",
+    "title": "읽기 전에\n문제부터 풀어 봐요",
+    "body": "본문을 읽기 전에\n먼저 문제를 풀어 본 사람이\n\n틀렸더라도\n나중 시험에서\n더 많이 맞혔어요.",
+    "bubble": "단원 끝 문제부터 봐요",
+    "source": "출처: Richland 외(2009), J. of Experimental Psychology: Applied"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h032-sponge",
+    "type": "list",
+    "title": "수세미\n이렇게 관리해요",
+    "items": [
+      "쓰고 나면 꽉 짜서 말리기",
+      "기름 그릇용·컵용 따로 쓰기",
+      "해지거나 냄새 나면 바꾸기"
+    ],
+    "bubble": "말려 두는 자리부터 정해요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h033-sticky-note",
+    "type": "list",
+    "title": "포스트잇 한 장에\n할 일 하나",
+    "items": [
+      "한 장에 할 일 하나만 적기",
+      "끝나면 떼어서 버리기",
+      "남은 장은 내일 맨 위로"
+    ],
+    "bubble": "다 떼면 오늘 끝",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
