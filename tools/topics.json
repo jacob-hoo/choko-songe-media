@@ -1383,5 +1383,112 @@
     ],
     "bubble": "다 떼면 오늘 끝",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m027-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "어제 못 한 일은\n오늘의 내가\n\n천천히 이어 가면 돼.",
+    "bubble": "한 걸음만 가 봐요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #027"
+  },
+  {
+    "id": "029-strangers",
+    "type": "one",
+    "title": "출근길 낯선 사람과\n한마디 나눠 보면",
+    "body": "기차에서 옆 사람과\n이야기를 나눈 사람이\n\n혼자 앉아 간 사람보다\n가는 길이 더 즐거웠다고\n답했어요.",
+    "bubble": "오늘 인사 한 번 해 봐요",
+    "speaker": "song-e",
+    "source": "출처: Epley·Schroeder(2014), J. of Experimental Psychology: General"
+  },
+  {
+    "id": "030-ikea-effect",
+    "type": "list",
+    "title": "내가 만든 건\n더 아끼게 돼요",
+    "items": [
+      "조립한 가구를 더 비싸게 쳤어요",
+      "내가 접은 종이접기도 더 아꼈어요",
+      "다 못 끝내면 이 효과가 사라졌어요"
+    ],
+    "bubble": "작은 것도 끝까지 만들어 봐요",
+    "speaker": "choko",
+    "source": "출처: Norton·Mochon·Ariely(2012), J. of Consumer Psychology"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s034-quit-smoking",
+    "type": "one",
+    "title": "담배 끊고 싶을 땐\n보건소 금연클리닉",
+    "body": "보건소 금연클리닉에서\n금연 상담과 보조제를\n무료로 받을 수 있어요.\n\n금연상담전화\n1544-9030",
+    "bubble": "아버지께 슬쩍 알려 드려요",
+    "source": "출처: 보건복지부·한국건강증진개발원 금연 지원 서비스"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s035-pension-age",
+    "type": "list",
+    "title": "국민연금 받는 나이\n태어난 해마다 달라요",
+    "items": [
+      "1961~64년생은 만 63세부터",
+      "1965~68년생은 만 64세부터",
+      "1969년생부터는 만 65세부터"
+    ],
+    "bubble": "내 연금 시작 나이 확인해요",
+    "source": "출처: 국민연금공단 노령연금 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s036-home-fire",
+    "type": "list",
+    "title": "부모님 댁에\n소화기·화재감지기 있나요",
+    "items": [
+      "모든 주택에 설치가 의무예요",
+      "소화기는 세대·층마다 1개 이상",
+      "감지기는 방·거실마다 1개씩"
+    ],
+    "bubble": "이번 방문 때 같이 봐요",
+    "source": "출처: 소방청 주택용 소방시설 안내"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h034-draw-words",
+    "type": "one",
+    "title": "외울 단어는\n그림으로 그려 봐요",
+    "body": "단어를 여러 번 쓴 사람보다\n그 뜻을 그림으로\n그린 사람이\n\n나중에 더 많이\n기억해 냈어요.",
+    "bubble": "낙서 같아도 괜찮아요",
+    "source": "출처: Wammes 외(2016), Q. J. of Experimental Psychology"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h035-hood-filter",
+    "type": "list",
+    "title": "주방 후드 필터\n이렇게 닦아요",
+    "items": [
+      "뜨거운 물에 베이킹소다 풀기",
+      "필터를 20~30분 담가 두기",
+      "솔로 문지르고 바싹 말려 끼우기"
+    ],
+    "bubble": "한 달에 한 번이면 돼요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h036-subject-color",
+    "type": "list",
+    "title": "과목마다\n색을 하나씩 정해요",
+    "items": [
+      "과목마다 펜·파일 색 하나씩",
+      "달력 마감일도 같은 색으로",
+      "색만 봐도 어느 과목인지 보여요"
+    ],
+    "bubble": "형광펜 색부터 골라요",
+    "source": "엄마는 늦깎이 대학생 공부노트"
   }
 ]
