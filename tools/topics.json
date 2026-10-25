@@ -1490,5 +1490,112 @@
     ],
     "bubble": "형광펜 색부터 골라요",
     "source": "엄마는 늦깎이 대학생 공부노트"
+  },
+  {
+    "id": "m028-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "body": "주머니 속\n작은 사탕처럼\n\n오늘 하루에도\n달콤한 순간이\n숨어 있어.",
+    "bubble": "오늘의 사탕 찾아봐요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #028"
+  },
+  {
+    "id": "031-planning-fallacy",
+    "type": "one",
+    "title": "일은 늘 생각보다\n오래 걸려요",
+    "body": "졸업 논문을 언제 끝낼지\n예상해 보라고 했더니\n\n그 날짜까지 끝낸 학생은\n열 명 중 세 명쯤이었어요.",
+    "bubble": "일정은 넉넉하게 잡아요",
+    "speaker": "choko",
+    "source": "출처: Buehler·Griffin·Ross(1994), J. of Personality and Social Psychology"
+  },
+  {
+    "id": "032-peak-end",
+    "type": "list",
+    "title": "끝이 좋으면\n기억도 좋아요",
+    "items": [
+      "차가운 물에 손을 60초 담갔어요",
+      "한 번은 30초를 더, 조금 덜 차갑게",
+      "사람들은 더 긴 쪽을 다시 골랐어요"
+    ],
+    "bubble": "하루 끝은 좋은 일로 마쳐요",
+    "speaker": "song-e",
+    "source": "출처: Kahneman 외(1993), Psychological Science"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s037-house-pension",
+    "type": "list",
+    "title": "집에 살면서 매달 받는\n주택연금",
+    "items": [
+      "부부 중 한 분이 만 55세 이상",
+      "공시가격 12억 원 이하 주택",
+      "가입 전 상담은 1688-8114"
+    ],
+    "bubble": "조건부터 같이 알아봐요",
+    "source": "출처: 한국주택금융공사 주택연금 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s038-copay-cap",
+    "type": "one",
+    "title": "병원비 많이 나온 해엔\n본인부담상한제",
+    "body": "1년 동안 낸 병원비가\n상한액을 넘으면\n넘은 만큼 돌려받아요.\n\n상한액은\n소득에 따라 달라요.",
+    "bubble": "건강보험공단에 물어봐요",
+    "source": "출처: 국민건강보험공단 본인부담상한제 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s039-phone-sos",
+    "type": "list",
+    "title": "부모님 휴대폰에\n긴급 SOS 켜 두세요",
+    "items": [
+      "갤럭시: 설정 → 안전 및 긴급",
+      "아이폰: 설정 → 긴급 구조 요청",
+      "측면 버튼을 빠르게 5번 누르기"
+    ],
+    "bubble": "다음 방문 때 같이 켜요",
+    "source": "출처: 삼성전자·Apple 사용 설명서"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h037-lyrics",
+    "type": "one",
+    "title": "공부할 땐\n가사 없는 음악",
+    "body": "가사 있는 노래를 들으며\n글을 읽은 사람이\n\n조용한 곳에서 읽은 사람보다\n독해 문제를 더 틀렸어요.",
+    "bubble": "연주곡이나 조용히 해요",
+    "source": "출처: Perham·Currie(2014), Applied Cognitive Psychology"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h038-freezer",
+    "type": "list",
+    "title": "냉동실\n이렇게 정리해요",
+    "items": [
+      "지퍼백에 이름·날짜 적기",
+      "납작하게 얼려 세워 두기",
+      "오래된 것부터 앞으로"
+    ],
+    "bubble": "한눈에 보이면 덜 버려요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h039-masking-tape",
+    "type": "list",
+    "title": "마스킹테이프로\n이름표 붙여요",
+    "items": [
+      "서랍·통에 테이프 한 줄 붙이기",
+      "네임펜으로 안에 든 것 적기",
+      "바뀌면 떼고 다시 붙이기"
+    ],
+    "bubble": "어디 뒀는지 바로 보여요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
