@@ -1,4 +1,8 @@
 {
   "s001-voicephishing": "401900737",
-  "h001-assignment": "401900771"
+  "h001-assignment": "401900771",
+  "s004-fall": "405370103",
+  "h002-grocery": "405370129",
+  "s002-7000-steps": "skip-health-source-rule",
+  "s003-dementia": "skip-health-source-rule"
 }
