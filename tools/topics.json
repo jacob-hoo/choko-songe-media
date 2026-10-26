@@ -1597,5 +1597,125 @@
     ],
     "bubble": "어디 뒀는지 바로 보여요",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m029-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "오늘 마음 날씨는\n어때요?",
+    "body": "바깥 날씨가\n어떻든\n\n내 마음엔\n작은 해 하나\n띄워 두자.",
+    "bubble": "마음 날씨는 맑음으로",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #029"
+  },
+  {
+    "id": "033-gratitude-letter",
+    "type": "one",
+    "title": "고마운 사람에게\n편지를 전해 보면",
+    "hook": "고마운 사람에게\n편지 써 본 적 있나요?",
+    "body": "고마운 사람에게\n편지를 써서\n직접 전한 사람들은\n\n한 달 뒤까지\n더 행복하다고\n답했어요.",
+    "bubble": "오늘 한 줄만 써 봐요",
+    "speaker": "choko",
+    "source": "출처: Seligman 외(2005), American Psychologist"
+  },
+  {
+    "id": "034-worry-writing",
+    "type": "list",
+    "title": "시험 전 긴장될 땐\n걱정을 글로 적어요",
+    "hook": "시험 전에 떨리면\n10분만 써 볼까요?",
+    "items": [
+      "시험 직전 10분, 걱정을 글로 적었어요",
+      "적지 않은 학생보다 점수가 좋았어요",
+      "불안이 큰 학생일수록 효과가 컸어요"
+    ],
+    "bubble": "떨리는 마음을 종이에 맡겨요",
+    "speaker": "song-e",
+    "source": "출처: Ramirez·Beilock(2011), Science"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s040-deferred-pension",
+    "type": "list",
+    "title": "국민연금 늦춰 받으면\n더 받아요",
+    "hook": "연금 1년 늦추면\n얼마나 더 받나요?",
+    "items": [
+      "최대 5년까지 늦출 수 있어요",
+      "1년 늦출 때마다 7.2%씩 더",
+      "5년 늦추면 36% 더 받아요"
+    ],
+    "bubble": "상담은 국번 없이 1355",
+    "source": "출처: 국민연금공단 연기연금 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s041-scaling",
+    "type": "list",
+    "title": "스케일링 건강보험\n올해 받으셨나요",
+    "hook": "스케일링 보험,\n1년에 몇 번?",
+    "items": [
+      "만 19세 이상 1년에 1번 건강보험",
+      "1월~12월 기준으로 세요",
+      "12월 31일이 지나면 올해 몫은 끝나요"
+    ],
+    "bubble": "연말 전에 치과 예약해요",
+    "source": "출처: 국민건강보험공단 치석제거 급여 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s042-fasting-glucose",
+    "type": "list",
+    "title": "건강검진표\n공복혈당 읽는 법",
+    "hook": "아버지 공복혈당\n100 넘으세요?",
+    "items": [
+      "100 미만: 정상",
+      "100~125: 공복혈당장애",
+      "126 이상: 의사와 재검사 상의"
+    ],
+    "bubble": "검진표 같이 봐요",
+    "source": "출처: 질병관리청 국가건강정보포털"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h040-sink-drain",
+    "type": "list",
+    "title": "싱크대 배수구\n냄새 잡는 법",
+    "hook": "배수구 냄새,\n10분이면 끝나요?",
+    "items": [
+      "거름망 빼서 음식물 털어 내기",
+      "베이킹소다 반 컵, 식초 한 컵 붓기",
+      "10분 뒤 뜨거운 물로 헹구기"
+    ],
+    "bubble": "일주일에 한 번이면 돼요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h041-longhand",
+    "type": "one",
+    "title": "강의 필기는\n손으로 해 봐요",
+    "hook": "강의 필기,\n노트북 vs 손?",
+    "body": "노트북으로 받아 적은 학생보다\n손으로 적은 학생이\n\n내용을 이해했는지 묻는\n문제를 더 잘 풀었어요.",
+    "bubble": "내 말로 줄여 적어요",
+    "source": "출처: Mueller·Oppenheimer(2014), Psychological Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h042-milk-carton",
+    "type": "list",
+    "title": "우유팩으로\n서랍 칸 나눠요",
+    "hook": "서랍 칸막이,\n우유팩으로 될까요?",
+    "items": [
+      "우유팩 씻어 말려 반으로 자르기",
+      "서랍 높이에 맞춰 잘라 세우기",
+      "칸마다 한 종류씩 넣기"
+    ],
+    "bubble": "한눈에 보이면 안 섞여요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
