@@ -41,6 +41,7 @@ PROMPT=$(cat <<'P'
 
 [정보 캐러셀 — 내일이 월요일 또는 목요일일 때만, 브랜드당 1편]
 - tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
+- 같은 jpg로 틱톡 사진 게시물도 같은 시각에 따로 예약한다(providers tiktok만, tiktokData autoAddMusic=true, title은 첫 장 제목 30자 이내, 캡션 마지막 줄 "가족에게 보내 주세요"). 틱톡이 인스타보다 반응이 커서다(2026-10-26).
 
 [초코송이 라운지 곡 공개 — 매일, 대장님 지시: "음원 전체를 순차적으로 공개 업로드", "하루 3곡씩"(2026-10-23)]
 - tools/.venv/bin/python tools/lounge/singles.py next --days 7 → 항목마다 초코송이(7435740) 유튜브에만 createScheduledPost 한 건: date+time(KST), media=single_url, youtubeData type "video", title=yt_title, category MUSIC, privacy public, madeForKids false, isAiGeneratedContent true, text=description, tags 초코송이·초코송이라운지·연주곡
