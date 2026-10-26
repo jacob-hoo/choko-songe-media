@@ -123,7 +123,28 @@ def draw_character(img, speaker, box, brand="choko"):
             emblem(img, (x0 + x1) // 2, (y0 + y1) // 2, r, b["speakers"][speaker], b.get("emblem", "?"))
 
 
-def render(t):
+def render_hook(t):
+    """첫 1.2초 장면: 제목만 크게. 인스타 3초 시청률이 2~35%라 첫 화면에 글을 다 보이지 않는다(2026-10-26)."""
+    b = BRANDS[t.get("brand", "choko")]
+    img = Image.new("RGB", (W, H), b["bg"])
+    d = ImageDraw.Draw(img)
+    usable = W - SIDE - SAFE_RIGHT
+    accent = b["speakers"][t["speaker"]]
+    y = SAFE_TOP + 20
+    d.rounded_rectangle((SIDE - 20, y - 20, W - SAFE_RIGHT + 20, y + 40), radius=30, fill=accent)
+    d.text((SIDE + 10, y - 12), t.get("badge", b["badge"]), font=font(36, True), fill=(255, 255, 255))
+    hf = font(int(104 * b["scale"]), True)
+    lines = wrap(d, t.get("hook", t["title"]), hf, usable)
+    block = len(lines) * int(hf.size * 1.3)
+    text_block(d, (SIDE, (H - block) // 2 - 160), t.get("hook", t["title"]), hf, usable, b["ink"], gap=1.3)
+    char_top = (H + block) // 2 - 60
+    draw_character(img, t["speaker"], (W // 2 - 170, char_top, W // 2 + 170, char_top + 340), t.get("brand", "choko"))
+    d.text((SIDE, H - SAFE_BOTTOM + 10), b["handle"], font=font(30, True), fill=accent)
+    return img
+
+
+def render(t, upto=None):
+    """upto: 목록형에서 앞의 몇 항목만 보이게(하나씩 나타나는 장면용)."""
     b = BRANDS[t.get("brand", "choko")]
     BG_, INK_, SUB_ = b["bg"], b["ink"], b["sub"]
     k = b["scale"]
@@ -149,7 +170,7 @@ def render(t):
     if t["type"] == "list":
         n = len(t["items"])
         size = 48 if n <= 3 else 44
-        for i, item in enumerate(t["items"], 1):
+        for i, item in enumerate(t["items"][:upto], 1):
             d.ellipse((SIDE + 10, cy + 4, SIDE + 70, cy + 64), fill=accent)
             num = str(i)
             nf = font(38, True)
@@ -191,27 +212,50 @@ def render(t):
     return img
 
 
-def to_video(png, mp4, brand="choko", seed=""):
-    """정지 카드에 아주 느린 줌을 넣은 7초 세로 영상.
+def stages(t, png):
+    """(이미지, 초) 목록. 제목 장면 1.2초 → 목록형은 항목이 하나씩 1초 간격으로 → 완성 카드."""
+    hook = png.with_name(png.stem + "-hook.png")
+    render_hook(t).save(hook)
+    out = [(hook, 1.2)]
+    if t["type"] == "list" and len(t["items"]) > 1:
+        for k in range(1, len(t["items"])):
+            p = png.with_name(f"{png.stem}-s{k}.png")
+            render(t, upto=k).save(p)
+            out.append((p, 1.0))
+    rest = VIDEO_SECONDS - sum(s for _, s in out)
+    out.append((png, max(rest, 2.5)))
+    return out
+
+
+def to_video(png, mp4, brand="choko", seed="", t=None):
+    """세로 카드 영상. t를 주면 제목 장면 → 항목이 하나씩 나타나는 장면 → 완성 카드, 없으면 정지 카드에 느린 줌.
     소리: 공용 배경음악(music/manifest.json, Suno Premier)에서 브랜드에 맞는 곡. 없으면 자체 합성 음원, 그것도 없으면 무음."""
     from bgm import ffmpeg_audio_args, pick
     ff = imageio_ffmpeg.get_ffmpeg_exe()
+    seq = stages(t, png) if t else [(png, VIDEO_SECONDS)]
+    total = sum(s for _, s in seq)
     track = pick(brand, seed or png.stem)
     music = ROOT / "music" / "calm-cdfg.wav"
     if track:
-        audio_in, af = ffmpeg_audio_args(track, VIDEO_SECONDS)
+        audio_in, af = ffmpeg_audio_args(track, total)
     else:
         audio_in, af = (["-i", str(music)] if music.exists() else ["-f", "lavfi", "-i", "anullsrc=r=44100:cl=stereo"]), "anull"
-    frames = VIDEO_SECONDS * 30
-    vf = (
-        f"scale=2160:3840,zoompan=z='min(zoom+0.0003,1.04)':d={frames}"
-        f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,format=yuv420p"
-    )
+    if t:
+        lst = png.with_name(png.stem + "-concat.txt")
+        lst.write_text("".join(f"file '{p}'\nduration {s}\n" for p, s in seq) + f"file '{seq[-1][0]}'\n")
+        video_in = ["-f", "concat", "-safe", "0", "-i", str(lst)]
+        vf = f"scale={W}:{H},fps=30,format=yuv420p"
+    else:
+        video_in = ["-loop", "1", "-i", str(png)]
+        vf = (
+            f"scale=2160:3840,zoompan=z='min(zoom+0.0003,1.04)':d={VIDEO_SECONDS * 30}"
+            f":x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s={W}x{H}:fps=30,format=yuv420p"
+        )
     cmd = [
         ff, "-y", "-loglevel", "error",
-        "-loop", "1", "-i", str(png),
+        *video_in,
         *audio_in,
-        "-vf", vf, "-af", af, "-t", str(VIDEO_SECONDS),
+        "-vf", vf, "-af", af, "-t", str(total),
         "-c:v", "libx264", "-preset", "medium", "-crf", "18",
         "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart",
         str(mp4),
@@ -232,7 +276,7 @@ def main():
         png = OUT / f"{t['id']}.png"
         render(t).save(png)
         if not args.no_video:
-            to_video(png, OUT / f"{t['id']}.mp4", t.get("brand", "choko"), t["id"])
+            to_video(png, OUT / f"{t['id']}.mp4", t.get("brand", "choko"), t["id"], t)
         print("ok", t["id"])
 
 
