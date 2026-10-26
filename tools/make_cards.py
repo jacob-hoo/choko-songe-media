@@ -212,6 +212,27 @@ def render(t, upto=None):
     return img
 
 
+FOLLOW = {
+    "choko": "팔로우하면 매일 하루 한 장",
+    "silver": "팔로우하면 부모님 정보 매일 3개",
+    "mom": "팔로우하면 공부·살림 팁 매일 3개",
+}
+
+
+def render_follow(t, png):
+    """마지막 1.5초: 완성 카드 위에 팔로우 띠를 얹는다(2026-10-26 목표: 팔로워 증가)."""
+    b = BRANDS[t.get("brand", "choko")]
+    img = Image.open(png).convert("RGB")
+    d = ImageDraw.Draw(img)
+    accent = b["speakers"][t["speaker"]]
+    msg = FOLLOW.get(t.get("brand", "choko"), "팔로우하고 다음 편 받기")
+    ff = font(46, True)
+    y0 = H - SAFE_BOTTOM - 470
+    d.rounded_rectangle((SIDE - 20, y0, W - SAFE_RIGHT + 20, y0 + 120), radius=60, fill=accent)
+    d.text(((W - SAFE_RIGHT + SIDE) / 2 - d.textlength(msg + " ＋", font=ff) / 2, y0 + 30), msg + " ＋", font=ff, fill=(255, 255, 255))
+    return img
+
+
 def stages(t, png):
     """(이미지, 초) 목록. 제목 장면 1.2초 → 목록형은 항목이 하나씩 1초 간격으로 → 완성 카드."""
     hook = png.with_name(png.stem + "-hook.png")
@@ -222,8 +243,11 @@ def stages(t, png):
             p = png.with_name(f"{png.stem}-s{k}.png")
             render(t, upto=k).save(p)
             out.append((p, 1.0))
-    rest = VIDEO_SECONDS - sum(s for _, s in out)
+    rest = VIDEO_SECONDS - sum(s for _, s in out) - 1.5
     out.append((png, max(rest, 2.5)))
+    follow = png.with_name(png.stem + "-follow.png")
+    render_follow(t, png).save(follow)
+    out.append((follow, 1.5))
     return out
 
 
