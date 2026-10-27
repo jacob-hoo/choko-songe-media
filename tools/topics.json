@@ -1717,5 +1717,131 @@
     ],
     "bubble": "한눈에 보이면 안 섞여요",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m030-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "오늘은 천천히\n가도 괜찮아요",
+    "body": "빨리 가지 않아도\n괜찮아.\n\n천천히 걸어야\n보이는 꽃도\n있으니까.",
+    "bubble": "오늘은 천천히 걸어요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #030"
+  },
+  {
+    "id": "035-awe-walk",
+    "type": "one",
+    "title": "산책할 땐\n주변을 새롭게 봐요",
+    "hook": "산책할 때\n하늘 본 적 있나요?",
+    "body": "8주 동안 일주일에 한 번\n15분씩 주변을 새롭게\n바라보며 걸은 사람들은\n\n기쁨 같은 좋은 감정을\n더 많이 느꼈다고 답했어요.",
+    "bubble": "오늘은 고개 들고 걸어요",
+    "speaker": "choko",
+    "source": "출처: Sturm 외(2020), Emotion"
+  },
+  {
+    "id": "036-social-ties",
+    "type": "list",
+    "title": "가까운 사람과의 관계가\n오래 가는 힘이에요",
+    "hook": "친구에게 연락한 게\n언제였나요?",
+    "items": [
+      "148개 연구, 30만 명 넘게 살펴봤어요",
+      "가족·친구와 관계가 탄탄한 사람은",
+      "연구 기간 생존 가능성이 50% 높았어요"
+    ],
+    "bubble": "오늘 안부 한 통 보내요",
+    "speaker": "song-e",
+    "source": "출처: Holt-Lunstad 외(2010), PLoS Medicine"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s043-early-pension",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 1",
+    "title": "조기연금 받는 나이\n태어난 해마다 달라요",
+    "hook": "69년생 조기연금\n몇 살부터?",
+    "items": [
+      "1965~68년생은 만 59세부터",
+      "1969년생부터는 만 60세부터",
+      "1년 당길 때마다 6%씩 줄어요"
+    ],
+    "bubble": "상담은 국번 없이 1355",
+    "source": "출처: 국민연금공단 조기노령연금 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s044-senior-job-age",
+    "type": "list",
+    "title": "노인일자리\n나이 기준 알아봐요",
+    "hook": "노인일자리,\n60세부터 돼요?",
+    "items": [
+      "만 65세 이상 기초연금 받으시면 공익활동",
+      "만 60세 이상이면 되는 일자리도 있어요",
+      "신청은 주민센터·노인복지관에서"
+    ],
+    "bubble": "연말 모집 공고 챙겨 봐요",
+    "source": "출처: 보건복지부·한국노인인력개발원 노인일자리 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s045-bp-numbers",
+    "type": "list",
+    "title": "혈압 수치\n이렇게 읽어요",
+    "hook": "아버지 혈압,\n140 넘으세요?",
+    "items": [
+      "120/80 미만: 정상",
+      "140/90 이상: 고혈압 기준",
+      "그 사이는 주의 단계예요"
+    ],
+    "bubble": "진단은 의사와 상의해요",
+    "source": "출처: 질병관리청 국가건강정보포털"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h043-veggie-drawer",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 1",
+    "title": "냉장고 야채칸\n10분 정리",
+    "hook": "야채칸 정리,\n10분이면 될까요?",
+    "items": [
+      "시든 채소부터 꺼내 비우기",
+      "바닥에 키친타월 한 장 깔기",
+      "세워 넣고 먼저 먹을 것은 앞에"
+    ],
+    "bubble": "칸이 한눈에 보여요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h044-own-voice",
+    "type": "list",
+    "title": "외울 땐 내 목소리로\n읽어요",
+    "hook": "외울 때, 읽기 vs\n녹음 듣기?",
+    "items": [
+      "직접 소리 내어 읽을 때 가장 잘 기억했어요",
+      "내 목소리 녹음 듣기가 그다음",
+      "눈으로만 읽기가 가장 낮았어요"
+    ],
+    "bubble": "이동할 땐 녹음 들어요",
+    "source": "출처: Forrin·MacLeod(2018), Memory"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h045-highlight-question",
+    "type": "list",
+    "title": "형광펜 칠한 곳은\n질문으로 바꿔요",
+    "hook": "형광펜 칠한 곳,\n덮으면 기억나요?",
+    "items": [
+      "칠한 문장을 질문 하나로 바꿔 적기",
+      "책을 덮고 질문에 답해 보기",
+      "틀린 질문만 다음 날 다시"
+    ],
+    "bubble": "스스로 시험이 효과가 커요",
+    "source": "출처: Dunlosky 외(2013), Psychological Science in the Public Interest"
   }
 ]
