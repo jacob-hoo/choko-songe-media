@@ -1843,5 +1843,131 @@
     ],
     "bubble": "스스로 시험이 효과가 커요",
     "source": "출처: Dunlosky 외(2013), Psychological Science in the Public Interest"
+  },
+  {
+    "id": "m031-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "오늘 나에게\n뭐라고 말할까요?",
+    "body": "잘했다는 말이\n안 나오는 날엔\n\n수고했다고\n나에게 먼저\n말해 주자.",
+    "bubble": "오늘도 수고했어요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #031"
+  },
+  {
+    "id": "037-hand-holding",
+    "type": "one",
+    "title": "힘들 땐 손을\n잡아 주세요",
+    "hook": "손 한 번 잡는 걸로\n달라질까요?",
+    "body": "긴장되는 순간\n남편 손을 잡은 사람은\n뇌의 위협 반응이\n가장 적었어요.\n\n낯선 사람 손이라도\n혼자일 때보다 나았어요.",
+    "bubble": "오늘 손 한 번 잡아요",
+    "speaker": "choko",
+    "source": "출처: Coan 외(2006), Psychological Science"
+  },
+  {
+    "id": "038-thinking-alone",
+    "type": "list",
+    "title": "가만히 생각만 하기\n생각보다 어려워요",
+    "hook": "15분 동안\n생각만 할 수 있나요?",
+    "items": [
+      "빈방에서 6~15분 생각만 하라고 했어요",
+      "많은 사람이 지루하고 힘들다고 답했어요",
+      "남성 3명 중 2명은 차라리 전기 자극을 눌렀어요"
+    ],
+    "bubble": "가끔은 멍하니 쉬어 봐요",
+    "speaker": "song-e",
+    "source": "출처: Wilson 외(2014), Science"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s046-cancer-screening-age",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 2",
+    "title": "나이별 국가암검진\n이렇게 달라요",
+    "hook": "54세 아버지,\n받을 암검진은?",
+    "items": [
+      "위암: 만 40세 이상 2년마다",
+      "대장암: 만 50세 이상 해마다",
+      "폐암: 만 54~74세 고위험 흡연자 2년마다"
+    ],
+    "bubble": "대상인지 건강보험공단에 물어봐요",
+    "source": "출처: 국립암센터·국민건강보험공단 국가암검진 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s047-voluntary-pension",
+    "type": "list",
+    "title": "60세 넘어도\n국민연금 더 낼 수 있어요",
+    "hook": "60세 넘어도\n연금 더 낼 수 있나요?",
+    "items": [
+      "국민연금 의무 가입은 만 60세까지",
+      "원하면 만 65세 전까지 더 낼 수 있어요",
+      "가입 기간 10년을 채우면 연금으로 받아요"
+    ],
+    "bubble": "상담은 국번 없이 1355",
+    "source": "출처: 국민연금공단 임의계속가입 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s048-cholesterol",
+    "type": "list",
+    "title": "검진표 콜레스테롤\n이렇게 읽어요",
+    "hook": "콜레스테롤,\n240 넘으셨어요?",
+    "items": [
+      "총콜레스테롤 240 이상이면 높은 편",
+      "LDL 콜레스테롤 160 이상이면 높은 편",
+      "중성지방 200 이상이면 높은 편"
+    ],
+    "bubble": "검진표 같이 찾아봐요",
+    "source": "출처: 질병관리청 국가건강정보포털"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h046-fridge-door",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 2",
+    "title": "냉장고 문 칸\n10분 정리",
+    "hook": "냉장고 문 칸,\n10분이면 될까요?",
+    "items": [
+      "소스병 다 꺼내 날짜 보고 비우기",
+      "칸 닦고 키 큰 병은 아래 칸으로",
+      "자주 쓰는 것은 앞줄에 세우기"
+    ],
+    "bubble": "문 열면 바로 보여요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h047-recall-61",
+    "type": "list",
+    "title": "네 번 읽기보다\n떠올리기 세 번",
+    "hook": "네 번 읽기 vs\n세 번 떠올리기?",
+    "items": [
+      "네 번 읽은 학생: 일주일 뒤 40% 기억",
+      "한 번 읽고 세 번 떠올린 학생: 61%",
+      "읽은 횟수보다 떠올린 횟수가 남아요"
+    ],
+    "bubble": "덮고 떠올려 봐요",
+    "source": "출처: Roediger·Karpicke(2006), Psychological Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h048-binder-clip",
+    "type": "list",
+    "title": "충전선은\n바인더 클립으로",
+    "hook": "책상 위 충전선,\n클립 하나면 돼요?",
+    "items": [
+      "책상 모서리에 바인더 클립 집기",
+      "클립 손잡이 사이로 충전선 끼우기",
+      "선마다 마스킹테이프로 이름 붙이기"
+    ],
+    "bubble": "책상이 한결 넓어져요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
