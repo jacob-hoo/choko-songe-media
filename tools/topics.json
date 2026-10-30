@@ -2104,5 +2104,140 @@
     ],
     "bubble": "섞어서 한 바퀴씩",
     "source": "출처: Kornell(2009), Applied Cognitive Psychology"
+  },
+  {
+    "id": "m033-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "오늘은 천천히\n가도 될까요?",
+    "body": "천천히 가도\n괜찮아.\n\n멈추지만 않으면\n충분히 잘 가고\n있는 거야.",
+    "bubble": "오늘도 한 걸음",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #033"
+  },
+  {
+    "id": "041-zeigarnik",
+    "type": "vs",
+    "title": "못 끝낸 일이\n더 오래 기억나요",
+    "hook": "끝낸 일 vs\n못 끝낸 일?",
+    "left_head": "끝까지 마친 일",
+    "left": [
+      "끝까지 마친 과제",
+      "덜 떠올렸어요"
+    ],
+    "right_head": "중간에 멈춘 일",
+    "right": [
+      "도중에 끊긴 과제",
+      "약 2배 가까이 더 떠올렸어요"
+    ],
+    "bubble": "시작만 해 둬도 돼요",
+    "speaker": "choko",
+    "source": "출처: Zeigarnik(1927), Psychologische Forschung"
+  },
+  {
+    "id": "042-pratfall",
+    "type": "list",
+    "title": "작은 실수가\n더 친근해 보여요",
+    "hook": "92점 맞힌 사람이\n커피를 쏟으면?",
+    "items": [
+      "퀴즈 문제 92%를 맞힌 사람이 커피를 쏟자",
+      "오히려 더 호감이라는 평가를 받았어요",
+      "평범한 점수의 사람이 쏟았을 땐 달랐어요"
+    ],
+    "bubble": "실수해도 괜찮아요",
+    "speaker": "song-e",
+    "source": "출처: Aronson 외(1966), Psychonomic Science"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s052-subway-65",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 4",
+    "title": "만 65세부터\n지하철이 무료예요",
+    "hook": "1961년생,\n지하철 무료 언제부터?",
+    "items": [
+      "도시철도는 만 65세부터 무료예요",
+      "1961년생은 올해 생일부터 해당돼요",
+      "KTX는 주중에 30% 경로 할인"
+    ],
+    "bubble": "신분증 꼭 챙기세요",
+    "source": "출처: 노인복지법 시행령 경로우대·코레일 경로 할인 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s053-pension-backpay",
+    "type": "list",
+    "title": "못 낸 국민연금\n나중에 낼 수 있어요",
+    "hook": "못 낸 국민연금,\n지금 내도 될까요?",
+    "items": [
+      "일을 쉬어 못 낸 기간이 있다면",
+      "나중에 내는 추후납부가 있어요",
+      "가입 기간이 늘면 연금도 늘어요"
+    ],
+    "bubble": "상담은 국번 없이 1355",
+    "source": "출처: 국민연금공단 추후납부 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s054-salt-5g",
+    "type": "list",
+    "title": "하루 소금\n이만큼이에요",
+    "hook": "하루 소금,\n5g 넘게 드세요?",
+    "items": [
+      "WHO 권고는 하루 소금 5g 미만",
+      "나트륨으로 치면 2,000mg이에요",
+      "포장 뒷면 나트륨 숫자를 확인해요"
+    ],
+    "bubble": "국물은 조금만 드세요",
+    "source": "출처: 세계보건기구(WHO)·식품의약품안전처 나트륨 줄이기 안내"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h052-container-lids",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 4",
+    "title": "밀폐용기 뚜껑\n10분 정리",
+    "hook": "밀폐용기 뚜껑,\n10분이면 정리될까요?",
+    "items": [
+      "용기와 뚜껑을 다 꺼내 짝 맞추기",
+      "짝 없는 것은 이참에 비우기",
+      "뚜껑은 파일꽂이에 크기순으로 세우기"
+    ],
+    "bubble": "파일꽂이가 딱이에요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h053-sleep-study",
+    "type": "list",
+    "title": "외우고 자면\n더 오래 가요",
+    "hook": "저녁에 외우기 vs\n아침에 외우기?",
+    "items": [
+      "저녁에 외우고 자고 아침에 복습한 쪽이",
+      "아침에 외우고 저녁에 복습한 쪽보다",
+      "일주일 뒤에도 더 많이 기억했어요"
+    ],
+    "bubble": "외우고 푹 자요",
+    "source": "출처: Mazza 외(2016), Psychological Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h054-kettle-citric",
+    "type": "list",
+    "title": "전기포트 물때\n구연산으로 닦아요",
+    "hook": "전기포트 물때,\n30분이면 빠질까요?",
+    "items": [
+      "물을 반쯤 붓고 구연산 한 스푼",
+      "한 번 끓인 뒤 30분 그대로 두기",
+      "물을 버리고 두세 번 끓여 헹구기"
+    ],
+    "bubble": "하얀 물때가 쏙",
+    "source": "엄마는 늦깎이 대학생 살림노트"
   }
 ]
