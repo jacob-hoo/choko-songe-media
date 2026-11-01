@@ -9,7 +9,7 @@ import subprocess
 from pathlib import Path
 
 import imageio_ffmpeg
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageChops
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "out"
@@ -167,7 +167,9 @@ def render(t, upto=None):
     d.rounded_rectangle((SIDE - 20, card_top, W - SAFE_RIGHT + 20, card_bottom), radius=36, fill=CARD)
     inner = usable - 60
     cy = card_top + 50
-    if t["type"] == "list":
+    if upto == 0 and t["type"] != "list":
+        pass
+    elif t["type"] == "list":
         n = len(t["items"])
         size = 48 if n <= 3 else 44
         for i, item in enumerate(t["items"][:upto], 1):
@@ -233,8 +235,45 @@ def render_follow(t, png):
     return img
 
 
+# 첫 장면 시험(2026-11-01): 초코송이만 움직이는 첫 장면, 봄날·엄마는 11/08 판정까지 질문 장면 유지.
+MOTION_BRANDS = {"choko"}
+MOTION_FPS = 30
+MOTION_ITEM_SECONDS = 0.4
+
+
+def motion_stages(t, png):
+    """글이 있는 카드로 바로 시작하고, 첫 프레임부터 내용이 아래에서 차례로 올라온다."""
+    n = len(t["items"]) if t["type"] == "list" else 1
+    frames_dir = png.with_name(png.stem + "-motion")
+    frames_dir.mkdir(exist_ok=True)
+    out = []
+    per = int(MOTION_ITEM_SECONDS * MOTION_FPS)
+    for k in range(n):
+        base = render(t, upto=k).convert("RGB")
+        full = render(t, upto=k + 1 if t["type"] == "list" else None).convert("RGB")
+        box = ImageChops.difference(base, full).getbbox()
+        piece = full.crop(box) if box else None
+        for f in range(per):
+            frame = base.copy()
+            if piece:
+                e = 1 - (1 - (f + 1) / per) ** 3  # 끝으로 갈수록 천천히
+                off = int((1 - e) * 90)
+                frame.paste(piece.crop((0, 0, piece.width, piece.height - off)), (box[0], box[1] + off))  # 카드 밖으로 넘치지 않게
+            p = frames_dir / f"{k:02d}-{f:02d}.png"
+            frame.save(p)
+            out.append((p, round(1 / MOTION_FPS, 4)))
+    used = sum(s for _, s in out)
+    out.append((png, max(VIDEO_SECONDS - used - 1.5, 2.5)))
+    follow = png.with_name(png.stem + "-follow.png")
+    render_follow(t, png).save(follow)
+    out.append((follow, 1.5))
+    return out
+
+
 def stages(t, png):
     """(이미지, 초) 목록. 제목 장면 1.2초 → 목록형은 항목이 하나씩 1초 간격으로 → 완성 카드."""
+    if t.get("brand", "choko") in MOTION_BRANDS:
+        return motion_stages(t, png)
     hook = png.with_name(png.stem + "-hook.png")
     render_hook(t).save(hook)
     out = [(hook, 1.2)]
