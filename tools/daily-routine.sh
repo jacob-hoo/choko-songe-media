@@ -10,7 +10,8 @@ cd "$HOME/choko-songe-media"
 PROMPT=$(cat <<'P'
 [매일 쇼츠 루틴 — 대장님 승인(2026-10-16): 자동 게시, 결과만 보고]
 ~/.claude/skills/posting-choko-songe-shorts/SKILL.md 를 먼저 읽고 그 절차대로 '내일'(KST) 분량만 만든다.
-- 브랜드별 하루 3개. Metricool: 초코송이 7435740(08:00 아침 한 줄, 12:00·18:00 하루 한 장), 봄날 수첩 7435746(09·13·19시), 엄마는 늦깎이 대학생 7435751(10·14·20시). 7204756·7435778은 손대지 않는다.
+- 브랜드별 하루 4개(대장님 지시 2026-11-01, 3개에서 늘림). Metricool: 초코송이 7435740(08:00 아침 한 줄, 12:00·15:00·18:00 하루 한 장. 15:00은 유튜브 제외, 곡까지 하루 6개 한도라서), 봄날 수첩 7435746(09·13·16·19시), 엄마는 늦깎이 대학생 7435751(10·14·17·20시). 7204756·7435778은 손대지 않는다.
+- 음원(대장님 지시 2026-11-01): 우리가 만든 음원만, 분위기에 맞게 쓴다. make_cards.py·coupang/render.py가 주제 글자로 곡을 고른다(쉼·위로 오르골, 살림·일상 로파이, 제도·건강·공부 피아노). 안 맞으면 topics.json에 "mood":"snow-night|rain-cafe|exam-night"을 넣는다. 틱톡 autoAddMusic은 틱톡 음악이 붙으므로 쓰지 않는다. 유튜브 설명 끝에 "배경음악: Suno로 만든 AI 연주곡" 한 줄을 넣는다.
 - 먼저 getScheduledPosts로 내일 예약을 보고 빈 슬롯만 채운다(재게시용 유튜브 단독 예약은 슬롯으로 세지 않는다).
 - 어제·오늘 게시분에 ERROR가 있으면 그 플랫폼만 20:30·21:30 등 빈 시간에 재예약한다(유튜브는 채널당 하루 6개 이하).
 - 작업: tools/topics.json(CRLF; python json indent=2, "\n"→"\r\n", 끝 줄바꿈 없음) 추가 → tools/.venv/bin/python tools/make_cards.py --only <id> → 카드 PNG 직접 열어 검수 → mp4를 저장소 루트에 복사, git commit(끝줄 'Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>')·push → raw.githubusercontent.com 200·크기 일치 확인 → createScheduledPost(videoCoverMilliseconds 0, providers youtube·instagram REEL·tiktok·threads, 응답 시각 확인).
@@ -18,7 +19,7 @@ PROMPT=$(cat <<'P'
 - 주제 방향(2026-10-21 대장님 지시): 봄날 수첩은 50대 이상 부모님(특히 남성 건강·생활)과 부모님 선물을 고르는 자녀가 볼 정보, 엄마는 늦깎이 대학생은 공부법 + 주방 정리·청소·문구 활용. 건강 주제는 공공기관 출처만, 질병 예방·치료 단정 금지.
 - 성과 기준(2026-10-26 분석, 볼트 '벤치마킹 결과'): 인스타 릴스는 조회 100~180에서 멈추고 3초 시청률이 2~35%다. 틱톡은 '나에게 해당하는지 확인'형이 터졌다(국민연금 받는 나이, 가정혈압, 냉장고 정리, 소리 내어 읽기).
   - topics.json 각 항목에 "hook"을 넣는다: 2줄 이하, 줄당 12자 안팎, 보는 사람이 자기에게 대입하는 질문 + 숫자(예: "1965년생,\n연금은 몇 살부터?", "냉장고 정리\n10분이면 끝나요?"). make_cards.py가 첫 1.2초를 이 문장만 크게 보여 주고 목록 항목을 하나씩 띄운다.
-  - 봄날 수첩은 3편 중 2편을 '돈·혜택·나이 기준'(연금·감면·무료 검진·지원금을 출생연도·나이별로)으로, 1편을 건강 수치 확인(혈압·허리둘레 등)으로. 엄마는 3편 중 1편 이상을 눈에 보이는 정리·청소(전/후가 분명한 것)로.
+  - 봄날 수첩은 4편 중 2~3편을 '돈·혜택·나이 기준'(연금·감면·무료 검진·지원금을 출생연도·나이별로)으로, 1편 이상을 건강 수치 확인(혈압·허리둘레 등)으로. 엄마는 4편 중 1편 이상을 눈에 보이는 정리·청소(전/후가 분명한 것)로.
   - 캡션 마지막 줄은 "부모님(가족)께 이 영상 보내 드리세요"처럼 공유를 부르는 한 줄로 끝낸다(인스타는 팔로워 밖 확산에 공유를 크게 본다).
 - 목표는 팔로워 증가(대장님 2026-10-26). 영상 끝 1.5초에 팔로우 띠가 자동으로 붙는다. 그 위에 다음을 지킨다.
   - 시리즈: 봄날은 「몇 년생 시리즈」(출생연도·나이로 갈리는 연금·검진·감면·지원 제도)를 매일 1편, hook에 "몇 년생 시리즈 n" 대신 질문을 쓰고 badge를 "봄날 수첩 · 몇 년생 시리즈 n"으로 둔다. 엄마는 「10분 살림 시리즈 n」(전/후가 보이는 정리·청소)을 매일 1편. 캡션 첫 줄 끝에 "(시리즈 n)", 마지막 줄 앞에 "다음 편은 내일 같은 시간, 팔로우해 두세요"(유튜브 설명은 "구독해 두세요")를 넣는다. 이 규칙은 유튜브·인스타·틱톡·스레드 네 곳 모두에 같이 적용한다(같은 영상·같은 캡션, 유튜브 제목은 hook 질문 + #shorts).
@@ -33,19 +34,20 @@ PROMPT=$(cat <<'P'
   products.csv 특징 칸에 없는 효능·스펙, 지어낸 경험, 질병 이름·치료·예방 단정, 대가성 문구 누락, 가격 표기 오류, 화면 글자 잘림, 다른 브랜드 말투.
   my_take 가 비어 있으면 특징 칸 사실만으로 한 줄(맞는 사람 + 확인할 점)을 써 넣는다. 써 보지 않은 체험은 쓰지 않는다.
 - 승인: 검수를 통과하면 run.py approve <내일>.
-- 예약: run.py pending 의 항목 → mp4·캐러셀 jpg를 저장소 루트에 복사·commit·push·raw 200 확인 → 브랜드마다 플랫폼별로 createScheduledPost(instagram REEL(showReelOnFeed=true, 체험 릴스는 팔로워 요건 미달로 실패해 쓰지 않음)+firstCommentText=pinned_comment, instagram 캐러셀 POST 봄날 11:00/엄마 11:30, 같은 시각 tiktok 사진 캐러셀(같은 jpg 5장, tiktokData autoAddMusic=true·commercialContentThirdParty=true), threads, tiktok 영상 commercialContentThirdParty=true(autoAddMusic는 영상에 쓰면 400 오류); 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> carousel=<id> tiktok_photo=<id> threads=<id> tiktok=<id>.
+- 예약: run.py pending 의 항목 → mp4·캐러셀 jpg를 저장소 루트에 복사·commit·push·raw 200 확인 → 브랜드마다 플랫폼별로 createScheduledPost(instagram REEL(showReelOnFeed=true, 체험 릴스는 팔로워 요건 미달로 실패해 쓰지 않음)+firstCommentText=pinned_comment, instagram 캐러셀 POST 봄날 11:00/엄마 11:30, 같은 시각 tiktok 사진 캐러셀(같은 jpg 5장, tiktokData commercialContentThirdParty=true, autoAddMusic는 쓰지 않음), threads, tiktok 영상 commercialContentThirdParty=true; 유튜브 제외) → run.py mark <date> <product_id> instagram=<id> carousel=<id> tiktok_photo=<id> threads=<id> tiktok=<id>.
 - 상품이 없으면(products.csv 소진) 보고만 한다.
 
-[스레드 질문형 글 — 브랜드당 하루 1편, 상품 링크 없음]
+[스레드 질문형 글 — 봄날·엄마 하루 2편, 초코송이 1편, 상품 링크 없음]
 - tools/.venv/bin/python tools/threads_daily.py <내일> → tools/threads_out/<내일>.json 의 글을 createScheduledPost(providers threads만, media 없음)로 예약 → 응답 id로 tools/.venv/bin/python tools/threads_daily.py mark <topic_id> <id>.
 
 [쿠팡 기획전 — tools/coupang/promos.csv]
 - 마감(ends)이 오늘부터 3일 안이고 아직 올리지 않은 기획전이 있으면, 해당 브랜드 스레드에 질문형 글 1편을 내일 09:30(봄날) 또는 10:30(엄마)에 예약한다. 첫 줄은 대가성 문구, 과장·지어낸 경험 금지, "가격·쿠폰은 페이지에서 확인".
 - 예약하면 promos.csv의 해당 줄 angle 칸 끝에 " [게시 YYYY-MM-DD]"를 붙인다.
 
-[정보 캐러셀 — 매일 브랜드당 1편, 틱톡 사진 게시물이 영상의 2~3배 조회라 2026-11-01 늘림. 고를 주제가 없으면 건너뛴다]
-- tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
-- 같은 jpg로 틱톡 사진 게시물도 같은 시각에 따로 예약한다(providers tiktok만, tiktokData autoAddMusic=true, title은 첫 장 제목 30자 이내, 캡션 마지막 줄 "가족에게 보내 주세요"). 틱톡이 인스타보다 반응이 커서다(2026-10-26).
+[정보 캐러셀 — 매일 브랜드당 1편(초코송이 포함), 틱톡 사진 게시물이 영상의 2~3배 조회라 2026-11-01 늘림. 고를 주제가 없으면 건너뛴다]
+- tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom, 초코송이는 choko) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 / 초코송이 10:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
+- 같은 jpg로 틱톡 사진 게시물도 같은 시각에 따로 예약한다(providers tiktok만, title은 첫 장 제목 30자 이내, 캡션 마지막 줄 "가족에게 보내 주세요"). 틱톡이 인스타보다 반응이 커서다(2026-10-26).
+- 우리 음원 슬라이드 영상(틱톡 사진 게시물에는 우리 음원을 넣을 수 없어 따로 만든다): info_carousel.py next <브랜드>로 다음 주제 하나 더 → info_carousel.py video <topic_id> → slideshow.mp4를 저장소 루트에 sl-<topic_id>.mp4로 복사·commit·push·raw 200 확인 → providers tiktok만 createScheduledPost(videoCoverMilliseconds 0, title 30자 이내, 캡션 마지막 줄 "가족에게 보내 주세요") 봄날 21:00 / 엄마 21:30 / 초코송이 21:00 → info_carousel.py mark <topic_id> <id>.
 
 [초코송이 라운지 곡 공개 — 매일, 대장님 지시: "음원 전체를 순차적으로 공개 업로드", "하루 3곡씩"(2026-10-23)]
 - tools/.venv/bin/python tools/lounge/singles.py next --days 7 → 항목마다 초코송이(7435740) 유튜브에만 createScheduledPost 한 건: date+time(KST), media=single_url, youtubeData type "video", title=yt_title, category MUSIC, privacy public, madeForKids false, isAiGeneratedContent true, text=description, tags 초코송이·초코송이라운지·연주곡
@@ -62,10 +64,11 @@ PROMPT=$(cat <<'P'
 - 바꿀 것 중 규칙 안에서 바로 할 수 있는 것(상품 순서 바꾸기, hooks.md 갱신)은 바로 하고, 슬롯 시간·예산이 드는 것은 보고의 "막힌 것"이 아니라 "쿠팡" 줄 뒤에 "제안: …"으로 붙인다.
 
 [성과 기록 — 매일, 지이사 방식 도입 2026-11-01]
+- (2026-11-01부터 게시량 증가: 봄날·엄마 인스타 7·틱톡 8·스레드 7·유튜브 4, 초코송이 인스타 5·틱톡 6·스레드 5·유튜브 6. 편당 조회·도달이 지난주의 절반 아래로 2주 이어지면 "쿠팡" 줄 뒤에 "제안: 편수 조정"으로 보고한다. 틱톡 사진은 자동 음악 없이 나가므로 음원 슬라이드 영상과 조회를 비교한다.)
 - 봄날 7435746(키 silver)·엄마 7435751(mom)·초코송이 7435740(choko)의 최근 8일 인스타 릴스(IGRE02,03,23,24,28 순서)와 틱톡(TKPO02,05,07 순서), 팔로워(IGEV01,TKEV07,THEV01,YTEV01)를 getAnalyticsDataByMetrics로 조회해 응답 rows를 그대로 tools/coupang/out/metrics/<오늘>.json 에 {"silver":{"ig":[...],"tk":[...],"ev":[...]},...} 로 저장한다(커밋 안 함). null을 0으로 바꾸지 않는다. 같은 게시물을 날짜별 파일로 비교하면 게시 후 1일·3일·7일 값이 나온다.
 - tools/.venv/bin/python tools/track.py 의 출력을 ~/NODE-JUN-Vault/50_공통업무/프로젝트/부업/추적 현황.md 맨 아래에 그대로 붙인다. "경고:"가 "없음"이 아니면 그 내용을 "막힌 것"에 쓴다. 게시 실패(ERROR)는 위 재예약 규칙대로 바로 처리한다.
 - 첫 장면 시험: 초코송이는 11/02부터 움직이는 첫 장면, 봄날·엄마는 질문 장면을 유지한다(make_cards.py의 MOTION_BRANDS). 11/08 판정 전에는 이 값을 바꾸지 않는다.
-- 첫 장면 시험 판정: 오늘이 2026-11-08 이후이고 ~/NODE-JUN-Vault/20_업무/미처리 업무.md 의 '정보 쇼츠 첫 장면' 항목이 아직 열려 있으면, 11/02~07 초코송이(움직임)와 봄날·엄마(질문), 각 브랜드 쿠팡 릴스의 3초 시청률·평균 시청을 track.py 값으로 비교해 "쿠팡" 줄 뒤에 "제안: 첫 장면 유지/되돌리기 + 근거"로 보고한다. 코드는 바꾸지 않는다(대장님 결정 사항).
+- 첫 장면 시험 판정: 오늘이 2026-11-08 이후이고 ~/NODE-JUN-Vault/20_업무/미처리 업무.md 의 '정보 쇼츠 첫 장면' 항목이 아직 열려 있으면, 11/02~07 초코송이(움직임)와 봄날·엄마(질문), 각 브랜드 쿠팡 릴스의 3초 시청률·평균 시청을 track.py 값으로 비교해(11/03부터 음원 선택 방식과 편수도 함께 바뀌었음을 근거에 밝힌다) "쿠팡" 줄 뒤에 "제안: 첫 장면 유지/되돌리기 + 근거"로 보고한다. 코드는 바꾸지 않는다(대장님 결정 사항).
 
 [쿠팡 실적 — 매일] tools/.venv/bin/python tools/coupang/report.py fetch --days 1 을 돌려 어제 클릭·주문·수수료를 "쿠팡" 줄 끝에 "(어제 클릭 n·주문 n·수수료 n원)"으로 붙인다. 키가 없으면(종료 코드 2) 건너뛴다.
 

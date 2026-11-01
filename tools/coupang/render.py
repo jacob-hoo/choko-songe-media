@@ -132,7 +132,7 @@ def render_video(row: dict, script: dict, out_mp4: Path) -> None:
     scenes += [(script["verdict"], "", price), ((f"댓글에 「{row.get('dm_keyword') or '링크'}」", f"DM 링크 · 프로필 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "")
                if DM_ENABLED else (f"프로필 링크 {int(''.join(c for c in row['product_id'] if c.isdigit()) or 0)}번", "제품 모음에서 보세요", ""))]
     # 공용 배경음악(Suno). 없으면 장면 전환 효과음.
-    track = bgm.pick(row["brand"], row["product_id"])
+    track = bgm.pick(row["brand"], row["product_id"], " ".join(row.get(k, "") for k in ("name", "category", "features")))
     if track:
         audio_in, af = bgm.ffmpeg_audio_args(track, len(scenes) * SCENE_SEC)
     else:

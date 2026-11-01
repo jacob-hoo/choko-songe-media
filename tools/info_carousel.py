@@ -6,13 +6,17 @@
 
 사용: tools/.venv/bin/python tools/info_carousel.py <topic_id>   → out/carousel/<topic_id>/card_N.jpg
      tools/.venv/bin/python tools/info_carousel.py next <brand> → 아직 캐러셀로 안 만든 가장 오래된 주제
+     tools/.venv/bin/python tools/info_carousel.py video <topic_id> → 같은 카드 + 우리 음원 세로 영상(slideshow.mp4)
 """
 import json
+import subprocess
 import sys
 from pathlib import Path
 
+import imageio_ffmpeg
 from PIL import Image, ImageDraw
 
+from bgm import ffmpeg_audio_args, pick, topic_text
 from make_cards import BRANDS, font, wrap
 
 ROOT = Path(__file__).resolve().parent
@@ -22,6 +26,7 @@ OUT = ROOT / "out" / "carousel"
 W, H = 1080, 1350
 ENDING = {
     "silver": "부모님께 이 게시물을 보내 드리세요.\n봄날 수첩을 팔로우하면 부모님 생활 정보를 매일 받아요.",
+    "choko": "지금 필요한 가족에게 보내 주세요.\n초코송이를 팔로우하면 하루 한 장 지혜를 받아요.",
     "mom": "저장해 두고 필요할 때 꺼내 보세요.\n공부하는 엄마의 살림·공부 루틴을 매일 나눠요.",
 }
 
@@ -58,6 +63,8 @@ def pages(t: dict) -> list[tuple[str, str, bool]]:
     ps = [(title, "", True)]
     if t.get("items"):
         ps += [(f"{i}. {x}", "", False) for i, x in enumerate(t["items"], 1)]
+    elif t.get("left"):
+        ps += [(t[f"{s}_head"], " ".join(t[s]), False) for s in ("left", "right")]
     else:
         body = " ".join(p.replace("\n", " ") for p in t.get("body", "").split("\n\n") if p.strip())
         ps.append((body, "", False))  # 문장이 장마다 끊기지 않게 한 장에
@@ -68,10 +75,11 @@ def pages(t: dict) -> list[tuple[str, str, bool]]:
 
 def build(topic_id: str) -> list[Path]:
     t = next(x for x in json.loads(TOPICS.read_text(encoding="utf-8")) if x["id"] == topic_id)
-    b = BRANDS[t["brand"]]
+    brand = t.get("brand", "choko")
+    b = BRANDS[brand]
     src = t.get("source", "")
     src = src if src.startswith("출처") else f"출처: {src}"
-    ps = pages(t) + [(ENDING[t["brand"]], src, False)]
+    ps = pages(t) + [(ENDING[brand], src, False)]
     out = OUT / topic_id
     out.mkdir(parents=True, exist_ok=True)
     paths = []
@@ -80,8 +88,10 @@ def build(topic_id: str) -> list[Path]:
         card(b, i, len(ps), head, body, big).save(p, quality=92)
         paths.append(p)
     caption = (f"{t['title'].replace(chr(10), ' ')}\n\n"
-               + ("\n".join(f"{i}. {x}" for i, x in enumerate(t.get('items', []), 1)) or t.get("body", "").replace("\n", " "))
-               + f"\n\n{src}\n\n{ENDING[t['brand']]}")
+               + ("\n".join(f"{i}. {x}" for i, x in enumerate(t.get('items', []), 1))
+                  or "\n".join(f"{t[s + '_head']}: {' '.join(t[s])}" for s in ("left", "right") if t.get(s))
+                  or t.get("body", "").replace("\n", " "))
+               + f"\n\n{src}\n\n{ENDING[brand]}")
     (out / "caption.txt").write_text(caption.replace("!", "."), encoding="utf-8")
     return paths
 
@@ -89,9 +99,29 @@ def build(topic_id: str) -> list[Path]:
 def next_topic(brand: str) -> str | None:
     hist = json.loads(HIST.read_text(encoding="utf-8")) if HIST.exists() else {}
     for t in json.loads(TOPICS.read_text(encoding="utf-8")):
-        if t.get("brand") == brand and t["id"] not in hist:
+        # 초코송이 항목은 brand 칸이 없다. 아침 한 줄(m…)은 항목이 없어 뺀다.
+        if t.get("brand", "choko") == brand and t["id"] not in hist and not (brand == "choko" and t["id"].startswith("m")):
             return t["id"]
     return None
+
+
+def video(topic_id: str, sec: float = 3.0) -> Path:
+    """틱톡 사진 게시물에는 우리 음원을 넣을 수 없어, 같은 카드를 음원이 든 세로 영상으로 만든다."""
+    t = next(x for x in json.loads(TOPICS.read_text(encoding="utf-8")) if x["id"] == topic_id)
+    brand = t.get("brand", "choko")
+    cards = build(topic_id)
+    out = OUT / topic_id
+    lst = out / "slideshow.txt"
+    lst.write_text("".join(f"file '{p.name}'\nduration {sec}\n" for p in cards) + f"file '{cards[-1].name}'\n")
+    total = sec * len(cards)
+    audio_in, af = ffmpeg_audio_args(pick(brand, topic_id, topic_text(t)), total)
+    bg = "0x%02x%02x%02x" % BRANDS[brand]["bg"]
+    mp4 = out / "slideshow.mp4"
+    subprocess.run([imageio_ffmpeg.get_ffmpeg_exe(), "-y", "-loglevel", "error",
+                    "-f", "concat", "-safe", "0", "-i", str(lst), *audio_in,
+                    "-vf", f"scale=1080:1350,pad=1080:1920:0:285:{bg},fps=30,format=yuv420p", "-af", af, "-t", str(total),
+                    "-c:v", "libx264", "-crf", "20", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(mp4)], check=True)
+    return mp4
 
 
 def mark(topic_id: str, post_id: str) -> None:
@@ -108,5 +138,7 @@ if __name__ == "__main__":
             print("\n".join(str(p) for p in build(tid)))
     elif sys.argv[1] == "mark":
         mark(sys.argv[2], sys.argv[3])
+    elif sys.argv[1] == "video":
+        print(video(sys.argv[2]))
     else:
         print("\n".join(str(p) for p in build(sys.argv[1])))

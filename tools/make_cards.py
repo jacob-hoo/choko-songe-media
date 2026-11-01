@@ -216,8 +216,8 @@ def render(t, upto=None):
 
 FOLLOW = {
     "choko": "팔로우·구독하면 매일 하루 한 장",
-    "silver": "팔로우·구독하면 부모님 정보 매일 3개",
-    "mom": "팔로우·구독하면 공부·살림 팁 매일 3개",
+    "silver": "팔로우·구독하면 부모님 정보 매일",
+    "mom": "팔로우·구독하면 공부·살림 팁 매일",
 }
 
 
@@ -293,11 +293,11 @@ def stages(t, png):
 def to_video(png, mp4, brand="choko", seed="", t=None):
     """세로 카드 영상. t를 주면 제목 장면 → 항목이 하나씩 나타나는 장면 → 완성 카드, 없으면 정지 카드에 느린 줌.
     소리: 공용 배경음악(music/manifest.json, Suno Premier)에서 브랜드에 맞는 곡. 없으면 자체 합성 음원, 그것도 없으면 무음."""
-    from bgm import ffmpeg_audio_args, pick
+    from bgm import ffmpeg_audio_args, pick, topic_text
     ff = imageio_ffmpeg.get_ffmpeg_exe()
     seq = stages(t, png) if t else [(png, VIDEO_SECONDS)]
     total = sum(s for _, s in seq)
-    track = pick(brand, seed or png.stem)
+    track = pick(brand, seed or png.stem, topic_text(t) if t else "")
     music = ROOT / "music" / "calm-cdfg.wav"
     if track:
         audio_in, af = ffmpeg_audio_args(track, total)
