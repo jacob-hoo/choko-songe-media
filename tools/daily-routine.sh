@@ -43,7 +43,7 @@ PROMPT=$(cat <<'P'
 - 마감(ends)이 오늘부터 3일 안이고 아직 올리지 않은 기획전이 있으면, 해당 브랜드 스레드에 질문형 글 1편을 내일 09:30(봄날) 또는 10:30(엄마)에 예약한다. 첫 줄은 대가성 문구, 과장·지어낸 경험 금지, "가격·쿠폰은 페이지에서 확인".
 - 예약하면 promos.csv의 해당 줄 angle 칸 끝에 " [게시 YYYY-MM-DD]"를 붙인다.
 
-[정보 캐러셀 — 내일이 월요일 또는 목요일일 때만, 브랜드당 1편]
+[정보 캐러셀 — 매일 브랜드당 1편, 틱톡 사진 게시물이 영상의 2~3배 조회라 2026-11-01 늘림. 고를 주제가 없으면 건너뛴다]
 - tools/.venv/bin/python tools/info_carousel.py next silver (엄마는 mom) → 출력된 card_N.jpg를 저장소 루트에 ic-<topic_id>-N.jpg로 복사·commit·push·raw 200 확인 → createScheduledPost(providers instagram만, instagramData.type POST, media 순서대로, text=out/carousel/<id>/caption.txt + 해시태그 4개) 봄날 07:30 / 엄마 12:00 → tools/.venv/bin/python tools/info_carousel.py mark <topic_id> <id>.
 - 같은 jpg로 틱톡 사진 게시물도 같은 시각에 따로 예약한다(providers tiktok만, tiktokData autoAddMusic=true, title은 첫 장 제목 30자 이내, 캡션 마지막 줄 "가족에게 보내 주세요"). 틱톡이 인스타보다 반응이 커서다(2026-10-26).
 
