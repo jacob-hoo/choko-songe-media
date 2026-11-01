@@ -11,7 +11,7 @@
 import argparse
 import json
 from pathlib import Path
-from statistics import mean
+from statistics import mean, median
 
 DIR = Path(__file__).resolve().parent / "coupang" / "out" / "metrics"
 # 첫 장면 시험: 초코송이는 11/02 08:00 KST 게시분부터 움직이는 장면, 봄날·엄마는 질문 장면 유지.
@@ -19,6 +19,7 @@ TEST_START = "20261101"
 NAMES = {"silver": "봄날", "mom": "엄마", "choko": "초코"}
 AD = "쿠팡 파트너스"
 LOW_VIEW = 5
+HOSTS = {**NAMES, "ssi": "씨부엉", "tojung": "토정"}
 
 
 def nums(rows, i):
@@ -67,16 +68,39 @@ def report(data):
     return out, alerts
 
 
+def cross(data):
+    """교차 운영: cross.json의 게스트 게시와 같은 계정 호스트 게시를 플랫폼별로 비교한다. 묶음 비교다."""
+    path = DIR / "cross.json"
+    log = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    out = []
+    for host in sorted({x["host"] for x in log}):
+        caps = [x["caption"] for x in log if x["host"] == host]
+        d = data.get(host) or {}
+        for net, rows in (("인스타", d.get("ig", [])), ("틱톡", d.get("tk", []))):
+            is_guest = lambda r: any((r[1] or "").startswith(c) for c in caps)
+            g = nums([r for r in rows if is_guest(r)], 2)
+            h = nums([r for r in rows if not is_guest(r)], 2)
+            if not g:
+                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 값 없음")
+            elif not h or median(h) == 0:
+                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 {len(g)}편 중앙값 {median(g):.0f}, 호스트 값 없음(판정 불가)")
+            else:
+                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 {len(g)}편 중앙값 {median(g):.0f} / 호스트 {len(h)}편 {median(h):.0f}")
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--file")
     a = ap.parse_args()
-    files = sorted(DIR.glob("*.json"))
+    files = sorted(p for p in DIR.glob("*.json") if p.stem != "cross")
     path = Path(a.file) if a.file else (files[-1] if files else None)
     if not path:
         print("기록 없음")
         return 2
-    out, alerts = report(json.loads(path.read_text(encoding="utf-8")))
+    data = json.loads(path.read_text(encoding="utf-8"))
+    out, alerts = report(data)
+    out += cross(data)
     print(f"[{path.stem}]")
     print("\n".join("- " + x for x in out))
     print("경고: " + ("; ".join(alerts) if alerts else "없음"))
