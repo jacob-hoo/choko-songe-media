@@ -38,6 +38,11 @@ BRANDS = {
                "speakers": {"silver": (46, 110, 78)}, "emblem": "봄"},
     "mom": {"bg": (252, 246, 250), "ink": (52, 30, 60), "sub": (120, 96, 128), "badge": "엄마는 늦깎이 대학생", "handle": "@boxheysoo", "scale": 1.0,
             "speakers": {"mom": (150, 84, 160)}, "emblem": "맘"},
+    # 교차 운영(2026-11-09~): 클이사가 지이사 계정에 올리는 카드
+    "ssi": {"bg": (244, 247, 251), "ink": (24, 36, 56), "sub": (88, 102, 124), "badge": "씨부엉 · 문서 확인 메모", "handle": "@ssi_boo_ung", "scale": 1.0,
+            "speakers": {"ssi": (40, 84, 140)}, "emblem": "부"},
+    "tojung": {"bg": (250, 246, 238), "ink": (50, 34, 22), "sub": (120, 100, 80), "badge": "토정비결 · 전통 상식", "handle": "@boxhey888", "scale": 1.0,
+               "speakers": {"tojung": (150, 60, 40)}, "emblem": "토"},
 }
 CARD = (255, 255, 255)
 
@@ -218,6 +223,8 @@ FOLLOW = {
     "choko": "팔로우·구독하면 매일 하루 한 장",
     "silver": "팔로우·구독하면 부모님 정보 매일",
     "mom": "팔로우·구독하면 공부·살림 팁 매일",
+    "ssi": "팔로우·구독하면 문서 확인 팁 매일",
+    "tojung": "팔로우·구독하면 전통 상식 매일",
 }
 
 
@@ -236,7 +243,7 @@ def render_follow(t, png):
 
 
 # 첫 장면 시험(2026-11-01): 초코송이만 움직이는 첫 장면, 봄날·엄마는 11/08 판정까지 질문 장면 유지.
-MOTION_BRANDS = {"choko"}
+MOTION_BRANDS = {"choko", "ssi", "tojung"}
 MOTION_FPS = 30
 MOTION_ITEM_SECONDS = 0.4
 

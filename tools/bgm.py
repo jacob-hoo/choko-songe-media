@@ -22,7 +22,7 @@ MOOD_SCENES = [
     ("rain-cafe", ["살림", "정리", "청소", "물때", "냉장고", "주방", "욕실", "수납", "세탁", "요리", "문구", "볼펜", "습관", "밀폐", "싱크대"]),
     ("exam-night", ["연금", "검진", "건강", "혈압", "혈당", "보험", "지원", "감면", "공부", "시험", "암기", "복습", "리포트", "과제"]),
 ]
-BRAND_SCENES = {"silver": "exam-night", "bomnal": "exam-night", "mom": "rain-cafe", "choko": "rain-cafe"}
+BRAND_SCENES = {"silver": "exam-night", "bomnal": "exam-night", "mom": "rain-cafe", "choko": "rain-cafe", "ssi": "rain-cafe", "tojung": "snow-night"}
 
 
 def scene_for(brand: str, text: str = "") -> str:

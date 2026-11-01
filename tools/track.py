@@ -3,6 +3,7 @@
 입력: coupang/out/metrics/<날짜>.json (루틴이 Metricool 응답 행을 그대로 저장)
     {"silver"|"mom"|"choko": {"ig": [[IGRE02, IGRE03, IGRE23, IGRE24, IGRE28], ...],
                               "tk": [[TKPO02, TKPO05, TKPO07], ...],
+                              "th": [[THPO02, THPO03, THPO08], ...], "yt": [[YTVP02, YTVP17, YTVP06], ...],
                               "ev": [[IGEV01, TKEV07, THEV01, YTEV01, 날짜], ...]}}
     python track.py                # 가장 최근 파일 요약 출력
     python track.py --file a.json
@@ -10,6 +11,7 @@
 """
 import argparse
 import json
+import re
 from pathlib import Path
 from statistics import mean, median
 
@@ -20,6 +22,7 @@ NAMES = {"silver": "봄날", "mom": "엄마", "choko": "초코"}
 AD = "쿠팡 파트너스"
 LOW_VIEW = 5
 HOSTS = {**NAMES, "ssi": "씨부엉", "tojung": "토정"}
+WHO = {"C": "클이사", "G": "지이사"}
 
 
 def nums(rows, i):
@@ -69,23 +72,20 @@ def report(data):
 
 
 def cross(data):
-    """교차 운영: cross.json의 게스트 게시와 같은 계정 호스트 게시를 플랫폼별로 비교한다. 묶음 비교다."""
-    path = DIR / "cross.json"
-    log = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    """교차 운영: 캡션 끝(유튜브는 제목 끝)의 by C·by G로 나눠 계정·플랫폼별로 비교한다. 묶음 비교다."""
     out = []
-    for host in sorted({x["host"] for x in log}):
-        caps = [x["caption"] for x in log if x["host"] == host]
+    for host, name in HOSTS.items():
         d = data.get(host) or {}
-        for net, rows in (("인스타", d.get("ig", [])), ("틱톡", d.get("tk", []))):
-            is_guest = lambda r: any((r[1] or "").startswith(c) for c in caps)
-            g = nums([r for r in rows if is_guest(r)], 2)
-            h = nums([r for r in rows if not is_guest(r)], 2)
-            if not g:
-                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 값 없음")
-            elif not h or median(h) == 0:
-                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 {len(g)}편 중앙값 {median(g):.0f}, 호스트 값 없음(판정 불가)")
-            else:
-                out.append(f"교차 {HOSTS.get(host, host)} {net}: 게스트 {len(g)}편 중앙값 {median(g):.0f} / 호스트 {len(h)}편 {median(h):.0f}")
+        for key, net in (("ig", "인스타"), ("tk", "틱톡"), ("th", "스레드"), ("yt", "유튜브")):
+            rows = d.get(key, [])
+            by = {w: [r for r in rows if re.search(rf"by {w}\s*$", r[1] or "")] for w in "CG"}
+            if not by["C"] and not by["G"]:
+                continue
+            parts = []
+            for w in "CG":
+                v = nums(by[w], 2)
+                parts.append(f"{WHO[w]} {len(by[w])}편 중앙값 {median(v):.0f}" if v else f"{WHO[w]} {len(by[w])}편 값 없음")
+            out.append(f"교차 {name} {net}: " + " / ".join(parts))
     return out
 
 
@@ -93,7 +93,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--file")
     a = ap.parse_args()
-    files = sorted(p for p in DIR.glob("*.json") if p.stem != "cross")
+    files = sorted(DIR.glob("*.json"))
     path = Path(a.file) if a.file else (files[-1] if files else None)
     if not path:
         print("기록 없음")
