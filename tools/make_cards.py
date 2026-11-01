@@ -257,7 +257,7 @@ def motion_stages(t, png):
             frame = base.copy()
             if piece:
                 e = 1 - (1 - (f + 1) / per) ** 3  # 끝으로 갈수록 천천히
-                off = int((1 - e) * 90)
+                off = min(int((1 - e) * 90), piece.height - 1)
                 frame.paste(piece.crop((0, 0, piece.width, piece.height - off)), (box[0], box[1] + off))  # 카드 밖으로 넘치지 않게
             p = frames_dir / f"{k:02d}-{f:02d}.png"
             frame.save(p)
