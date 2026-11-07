@@ -3404,5 +3404,194 @@
     ],
     "bubble": "주말에 한 번 비워요",
     "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "id": "m041-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "일요일인데\n그냥 쉬어도 될까요?",
+    "body": "오늘은\n아무것도 안 해도\n괜찮은 날.\n\n쉬는 것도\n내일을 위한 일이야.",
+    "bubble": "푹 쉬어요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #041"
+  },
+  {
+    "id": "062-free-kiss",
+    "type": "vs",
+    "title": "공짜라는 말에\n마음이 기울어요",
+    "hook": "1센트 vs 공짜,\n뭘 고를까요?",
+    "left_head": "15센트 vs 1센트",
+    "left": [
+      "고급 초콜릿 73%",
+      "작은 키세스 27%"
+    ],
+    "right_head": "14센트 vs 공짜",
+    "right": [
+      "고급 초콜릿 31%",
+      "공짜 키세스 69%"
+    ],
+    "bubble": "공짜 앞에서 한 번 더",
+    "speaker": "choko",
+    "source": "출처: Shampanier·Mazar·Ariely(2007), Marketing Science"
+  },
+  {
+    "id": "063-ikea-effect",
+    "type": "list",
+    "title": "내가 만든 건\n더 값지게 느껴요",
+    "hook": "직접 조립한 상자,\n얼마나 더 쳐줄까요?",
+    "items": [
+      "이케아 수납 상자를 직접 조립하게 했어요",
+      "다 만든 상자를 본 사람과 값을 비교했어요",
+      "조립한 쪽이 약 63% 더 높은 값을 불렀어요"
+    ],
+    "bubble": "내 손이 닿으면 소중해요",
+    "speaker": "song-e",
+    "source": "출처: Norton·Mochon·Ariely(2012), Journal of Consumer Psychology"
+  },
+  {
+    "id": "064-decoy",
+    "type": "vs",
+    "title": "선택지 하나가\n고르는 답을 바꿔요",
+    "hook": "구독 묶음 상품,\n32%가 84%로?",
+    "left_head": "선택지 2개",
+    "left": [
+      "온라인 59달러 68%",
+      "인쇄+온라인 125달러 32%"
+    ],
+    "right_head": "인쇄만 125달러 추가",
+    "right": [
+      "인쇄만 고른 사람 0%",
+      "인쇄+온라인 84%"
+    ],
+    "bubble": "필요한 것부터 봐요",
+    "speaker": "choko",
+    "source": "출처: Ariely(2008), 『Predictably Irrational』"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s081-implant-1961",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 12",
+    "title": "만 65세부터\n임플란트 건강보험",
+    "hook": "1961년생,\n임플란트 보험은?",
+    "items": [
+      "만 65세부터 건강보험이 적용돼요",
+      "평생 1인 2개까지예요",
+      "본인 부담은 비용의 30%예요"
+    ],
+    "bubble": "치과에서 먼저 물어봐요",
+    "source": "출처: 국민건강보험공단 임플란트 건강보험 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s082-memory-check-60",
+    "type": "list",
+    "title": "만 60세 이상\n치매 선별검사 무료",
+    "hook": "60세 넘으면\n치매 검사 무료?",
+    "items": [
+      "만 60세 이상이면 받을 수 있어요",
+      "가까운 보건소 치매안심센터에서",
+      "결과에 따라 다음 검사를 안내받아요"
+    ],
+    "bubble": "같이 가 봐요",
+    "source": "출처: 보건복지부·중앙치매센터 치매안심센터 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s083-waist",
+    "type": "list",
+    "title": "허리둘레\n이렇게 재요",
+    "hook": "아버지 허리둘레,\n90cm 넘으세요?",
+    "items": [
+      "갈비뼈 맨 아래와 골반 맨 위의 중간",
+      "숨을 편히 내쉰 상태에서 줄자로",
+      "남성 90cm·여성 85cm 이상이면 복부비만"
+    ],
+    "bubble": "같이 재 봐요",
+    "source": "출처: 질병관리청 국가건강정보포털 복부비만"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h081-microwave",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 12",
+    "title": "전자레인지 안\n10분 청소",
+    "hook": "전자레인지 청소,\n10분이면 돼요?",
+    "items": [
+      "전자레인지용 그릇에 물과 식초 한 숟갈",
+      "3분 돌리고 문 닫은 채 5분 두기",
+      "김 서린 안쪽을 행주로 닦기"
+    ],
+    "bubble": "얼룩이 불어 있어요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h082-interleave",
+    "type": "vs",
+    "title": "문제는 섞어서\n풀어 봐요",
+    "hook": "섞어 풀면\n1주 뒤 점수 3배?",
+    "left_head": "한 유형씩 몰아 풀기",
+    "left": [
+      "연습 땐 89% 맞혔어요",
+      "1주 뒤 시험은 20%"
+    ],
+    "right_head": "여러 유형 섞어 풀기",
+    "right": [
+      "연습 땐 60%로 헷갈려요",
+      "1주 뒤 시험은 63%"
+    ],
+    "bubble": "헷갈려도 섞어 풀어요",
+    "source": "출처: Rohrer·Taylor(2007), Instructional Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h083-hood-filter",
+    "type": "list",
+    "title": "후드 필터 기름때\n담가 두면 쉬워요",
+    "hook": "후드 필터,\n언제 닦으셨어요?",
+    "items": [
+      "뜨거운 물에 베이킹소다 풀기",
+      "필터를 30분 담가 두기",
+      "솔로 문지르고 헹군 뒤 말리기"
+    ],
+    "bubble": "담가 두기만 해요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s084-home-bp-log",
+    "type": "list",
+    "title": "가정혈압\n아침·저녁 두 번씩",
+    "hook": "가정혈압은\n하루 몇 번?",
+    "items": [
+      "아침: 일어나 1시간 안, 약 먹기 전",
+      "저녁: 잠자리에 들기 전",
+      "1~2분 간격으로 2번 재서 적기"
+    ],
+    "bubble": "수첩에 적어 가요",
+    "source": "출처: 질병관리청 국가건강정보포털 가정혈압 측정"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h084-read-aloud-edit",
+    "type": "list",
+    "title": "리포트 고칠 땐\n소리 내어 읽어요",
+    "hook": "리포트 다 쓰고\n소리 내어 읽나요?",
+    "items": [
+      "다 쓴 리포트를 하루 묵혀 두기",
+      "처음부터 소리 내어 읽기",
+      "숨이 찬 문장은 둘로 나누기"
+    ],
+    "bubble": "귀가 먼저 알아채요",
+    "source": "엄마는 늦깎이 대학생 공부노트"
   }
 ]
