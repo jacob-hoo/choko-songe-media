@@ -4143,5 +4143,140 @@
     ],
     "bubble": "올해 입동은 지났어요",
     "source": "출처: 한국민족문화대백과사전 「절기」"
+  },
+  {
+    "id": "m044-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "수요일,\n벌써 반이나 왔나요?",
+    "body": "벌써 반,\n아직 반.\n\n어느 쪽으로 봐도\n여기까지 온 건 너야.",
+    "bubble": "반이나 왔어요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #044"
+  },
+  {
+    "id": "069-gratitude-weekly",
+    "type": "vs",
+    "title": "감사 쓰기\n자주 할수록 좋을까",
+    "hook": "감사 일기,\n매주 1번 vs 3번?",
+    "left_head": "일주일에 1번",
+    "left": [
+      "6주 동안 감사한 일을 적었어요",
+      "행복감이 올라갔어요"
+    ],
+    "right_head": "일주일에 3번",
+    "right": [
+      "같은 6주, 더 자주 적었어요",
+      "뚜렷한 변화가 없었어요"
+    ],
+    "bubble": "한 주에 한 번이면 돼요",
+    "speaker": "choko",
+    "source": "출처: Lyubomirsky·Sheldon·Schkade(2005), Review of General Psychology"
+  },
+  {
+    "id": "070-switch-cost",
+    "type": "list",
+    "title": "일을 번갈아 하면\n시간이 새요",
+    "hook": "일 두 개 번갈아 하면,\n시간 몇 % 사라질까요?",
+    "items": [
+      "일을 바꿀 때마다 전환 비용이 생겨요",
+      "일이 복잡할수록 손실이 커져요",
+      "짧은 전환도 생산 시간의 40%까지"
+    ],
+    "bubble": "한 번에 하나씩 해요",
+    "speaker": "song-e",
+    "source": "출처: 미국심리학회(APA) 「Multitasking: Switching costs」"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s091-basic-apply",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 15",
+    "title": "기초연금\n신청은 이때부터",
+    "hook": "1961년생,\n기초연금 언제 신청해요?",
+    "items": [
+      "만 65세 생일이 속한 달 1개월 전부터",
+      "주민센터·국민연금공단 지사 방문",
+      "복지로 누리집에서 온라인 신청"
+    ],
+    "bubble": "생일 달부터 세 봐요",
+    "source": "출처: 보건복지부 기초연금"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s092-custom-care",
+    "type": "list",
+    "title": "노인맞춤돌봄\n누가 받을 수 있나요",
+    "hook": "혼자 계신 부모님,\n돌봄 대상인가요?",
+    "items": [
+      "만 65세 이상 기초생활수급자·차상위",
+      "또는 기초연금을 받으시는 분",
+      "주소지 읍·면·동 주민센터에 신청"
+    ],
+    "bubble": "주민센터에 물어봐요",
+    "source": "출처: 보건복지부 노인맞춤돌봄서비스"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s093-triglyceride",
+    "type": "list",
+    "title": "검진표 중성지방\n이 숫자를 봐요",
+    "hook": "아버지 중성지방,\n200 넘으세요?",
+    "items": [
+      "150 미만: 적정",
+      "150~199: 경계",
+      "200 이상: 높음"
+    ],
+    "bubble": "검진표 같이 봐요",
+    "source": "출처: 질병관리청 국가건강정보포털 이상지질혈증"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h091-cutting-board",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 15",
+    "title": "도마 냄새\n10분 손질",
+    "hook": "도마 냄새,\n10분이면 잡힐까요?",
+    "items": [
+      "굵은소금 뿌려 수세미로 문지르기",
+      "식초 푼 물로 헹구기",
+      "세워서 바람 잘 드는 곳에 말리기"
+    ],
+    "bubble": "세워서 말려요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h092-spacing-gap",
+    "type": "list",
+    "title": "시험까지 남은 날\n복습 간격 정하기",
+    "hook": "시험 1주 남았어요,\n복습 간격은?",
+    "items": [
+      "시험이 1주 뒤면 간격은 그 20~40%",
+      "시험이 1년 뒤면 5~10%",
+      "시험이 멀수록 간격을 넓혀요"
+    ],
+    "bubble": "달력에 복습 날 적어요",
+    "source": "출처: Cepeda 외(2008), Psychological Science"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h093-pomodoro",
+    "type": "list",
+    "title": "25분 공부\n5분 쉬기",
+    "hook": "공부 25분,\n쉬는 건 몇 분?",
+    "items": [
+      "타이머 25분 맞추고 한 가지만",
+      "울리면 5분 쉬기",
+      "4번 하면 15~30분 길게 쉬기"
+    ],
+    "bubble": "타이머부터 맞춰요",
+    "source": "출처: Francesco Cirillo 「The Pomodoro Technique」"
   }
 ]
