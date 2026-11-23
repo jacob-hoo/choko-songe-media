@@ -89,10 +89,19 @@ P
     --permission-mode auto \
     --allowedTools "Read,Write,Edit,Glob,Grep,Bash,mcp__claude_ai_Metricool_Social_Media_Management__getScheduledPosts,mcp__claude_ai_Metricool_Social_Media_Management__createScheduledPost,mcp__claude_ai_Metricool_Social_Media_Management__getAnalyticsDataByMetrics,mcp__claude_ai_Metricool_Social_Media_Management__getBestTimeToPostByNetwork" \
     --output-format text
-  echo "=== $(date '+%F %T') 끝 (exit $?)"
+  rc=$?   # $(date …) 가 $? 를 0 으로 덮어쓰기 전에 먼저 잡는다
+  echo "=== $(date '+%F %T') 끝 (exit $rc)"
+  echo "$rc" >"$LOG_DIR/.last_rc"
 } >"$LOG" 2>&1
+RC=$(cat "$LOG_DIR/.last_rc" 2>/dev/null || echo 99)
 
 SUMMARY=$(grep -E '^(만든 것|실패·재예약|쿠팡|막힌 것):' "$LOG" | tail -4)
+if [ "$RC" != 0 ]; then
+  # 실패를 성공처럼 보이게 하지 않는다: 원인 한 줄(로그인 만료 등)을 붙여 보고한다
+  WHY=$(grep -m1 -iE 'expired|unauthori|401|403|not logged|login|rate.?limit|usage limit' "$LOG" | cut -c1-160)
+  SUMMARY="⚠️ 루틴 실패(exit $RC)${WHY:+ — $WHY}. 로그: $LOG${SUMMARY:+
+$SUMMARY}"
+fi
 [ -n "$SUMMARY" ] || SUMMARY="루틴이 정상 보고를 남기지 못했습니다. 로그: $LOG"
 
 # 공용 볼트 일지(50_일지/오늘.md, '## 클이사' 아래)에 같은 결과를 남긴다. 동기화는 vault-sync.timer 가 한다.
@@ -125,3 +134,5 @@ import json, sys
 print(json.dumps({"content": "📮 쇼츠 루틴 " + __import__('datetime').date.today().isoformat() + "\n" + sys.argv[1],
                   "allowed_mentions": {"parse": []}}))
 PY
+# 실패면 systemd 에도 실패로 남긴다(예전엔 항상 0 이라 11/11~23 로그인 만료가 가려졌다)
+exit "$RC"
