@@ -4278,5 +4278,225 @@
     ],
     "bubble": "타이머부터 맞춰요",
     "source": "출처: Francesco Cirillo 「The Pomodoro Technique」"
+  },
+  {
+    "id": "m045-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "오늘 하루,\n한 가지만 해도 될까요?",
+    "body": "다 하려다\n지치는 날보다\n\n하나 끝낸 날이\n마음은 더 가벼워.",
+    "bubble": "하나면 충분해요",
+    "speaker": "song-e",
+    "source": "초코송이 아침 한 줄 #045"
+  },
+  {
+    "id": "071-mere-exposure",
+    "type": "list",
+    "title": "자주 보면\n좋아지는 이유",
+    "hook": "자주 본 얼굴,\n더 좋아질까요?",
+    "items": [
+      "낯선 단어·얼굴을 횟수만 달리해 보여 줬어요",
+      "많이 본 것일수록 더 좋게 평가했어요",
+      "익숙함이 호감으로 이어져요"
+    ],
+    "bubble": "자주 보면 정들어요",
+    "speaker": "choko",
+    "source": "출처: Zajonc(1968), Journal of Personality and Social Psychology"
+  },
+  {
+    "id": "072-social-loafing",
+    "type": "list",
+    "title": "여럿이 하면\n한 사람 몫이 줄어요",
+    "hook": "6명이 함께 박수 치면,\n한 사람 힘은 몇 %?",
+    "items": [
+      "혼자 낸 소리를 100으로 봐요",
+      "2명이면 한 사람당 71%",
+      "6명이면 한 사람당 40%"
+    ],
+    "bubble": "내 몫을 정해 둬요",
+    "speaker": "song-e",
+    "source": "출처: Latané 외(1979), Journal of Personality and Social Psychology"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s094-house-pension-55",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 16",
+    "title": "주택연금\n가입 기준",
+    "hook": "1971년생,\n주택연금 가입되나요?",
+    "items": [
+      "부부 중 한 분이 만 55세 이상",
+      "공시가격 12억 원 이하 주택",
+      "가입하면 평생 살면서 매달 받아요"
+    ],
+    "bubble": "공시가격부터 봐요",
+    "source": "출처: 한국주택금융공사 주택연금"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s095-hdl",
+    "type": "list",
+    "title": "검진표 HDL\n이 숫자를 봐요",
+    "hook": "아버지 HDL,\n40 넘으세요?",
+    "items": [
+      "40 미만: 낮음",
+      "60 이상: 높음",
+      "검진표 '고밀도 콜레스테롤' 칸"
+    ],
+    "bubble": "검진표 같이 봐요",
+    "source": "출처: 질병관리청 국가건강정보포털 이상지질혈증"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s096-survivor-pension",
+    "type": "list",
+    "title": "유족연금\n얼마나 받나요",
+    "hook": "아버지 국민연금,\n어머니가 받나요?",
+    "items": [
+      "가입 10년 미만: 기본연금액의 40%",
+      "10년 이상 20년 미만: 50%",
+      "20년 이상: 60%"
+    ],
+    "bubble": "공단 1355에 물어봐요",
+    "source": "출처: 국민연금공단 유족연금"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h094-washer-gasket",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 16",
+    "title": "세탁기 고무패킹\n10분 손질",
+    "hook": "세탁기 고무패킹,\n10분이면 닦일까요?",
+    "items": [
+      "패킹을 젖혀 머리카락·먼지 걷기",
+      "주방세제 푼 물을 천에 묻혀 닦기",
+      "세탁 끝나면 문 열어 말리기"
+    ],
+    "bubble": "문 열어 말려요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h095-concrete-examples",
+    "type": "list",
+    "title": "개념은\n예시로 붙잡아요",
+    "hook": "개념마다\n예시 2개 떠오르세요?",
+    "items": [
+      "개념을 읽고 예시 2개 찾기",
+      "예시끼리 같은 점 짚기",
+      "다른 예시로 다시 설명해 보기"
+    ],
+    "bubble": "예시 두 개부터요",
+    "source": "출처: Weinstein·Madan·Sumeracki(2018), Cognitive Research"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h096-under-sink",
+    "type": "list",
+    "title": "싱크대 아래\n10분 정리",
+    "hook": "싱크대 아래,\n세제 몇 통인가요?",
+    "items": [
+      "다 꺼내고 바닥 물기 확인",
+      "세제·봉투·냄비로 칸 나누기",
+      "자주 쓰는 건 앞쪽에 두기"
+    ],
+    "bubble": "같은 세제는 하나만",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-010-terms-find",
+    "type": "list",
+    "title": "보험 약관\n다시 찾는 곳",
+    "hook": "내 보험 약관,\n어디서 다시 보나요?",
+    "items": [
+      "보험사 누리집 '상품공시'에서 찾기",
+      "생명보험은 생명보험협회 공시실",
+      "손해보험은 손해보험협회 공시실"
+    ],
+    "bubble": "상품명부터 적어 둬요",
+    "source": "출처: 생명보험협회·손해보험협회 공시실"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-011-silson24",
+    "type": "list",
+    "title": "실손보험 청구\n실손24로 해요",
+    "hook": "실손보험 청구,\n서류 없이 되나요?",
+    "items": [
+      "'실손24' 앱·누리집에서 청구",
+      "참여 병원·약국이면 서류를 대신 보내요",
+      "참여 여부는 실손24에서 먼저 확인"
+    ],
+    "bubble": "참여 병원부터 봐요",
+    "source": "출처: 보험개발원 실손24, 금융위원회"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-012-lapse-notice",
+    "type": "list",
+    "title": "보험료 밀리면\n이 순서예요",
+    "hook": "보험료 밀리면,\n바로 해지되나요?",
+    "items": [
+      "보험사가 14일 이상 납입을 알려요(독촉)",
+      "그 기간이 지나도 안 내면 해지",
+      "해지 후 3년 안엔 부활 청약 가능"
+    ],
+    "bubble": "독촉 문자를 꼭 봐요",
+    "source": "출처: 금융감독원 생명보험 표준약관"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-010-sipgan",
+    "type": "list",
+    "title": "십간(十干)\n열 글자",
+    "hook": "십간 열 글자,\n다 외우세요?",
+    "items": [
+      "갑·을·병·정·무",
+      "기·경·신·임·계",
+      "해 이름 앞 글자가 십간이에요"
+    ],
+    "bubble": "소리 내어 읽어 봐요",
+    "source": "출처: 한국민족문화대백과사전 「간지」"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-011-sibiji",
+    "type": "list",
+    "title": "십이지(十二支)\n열두 동물",
+    "hook": "띠 열두 동물,\n순서 맞히세요?",
+    "items": [
+      "자(쥐)·축(소)·인(범)·묘(토끼)",
+      "진(용)·사(뱀)·오(말)·미(양)",
+      "신(원숭이)·유(닭)·술(개)·해(돼지)"
+    ],
+    "bubble": "내 띠를 찾아봐요",
+    "source": "출처: 한국민족문화대백과사전 「십이지」"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-012-sohan",
+    "type": "list",
+    "title": "1월 5일 무렵\n절기 소한(小寒)",
+    "hook": "1월 5일 무렵,\n무슨 절기?",
+    "items": [
+      "소한: 동지 다음, 대한 앞 절기",
+      "태양의 황경이 285도가 되는 때",
+      "음력 12월(섣달)의 절기"
+    ],
+    "bubble": "달력에 표시해 봐요",
+    "source": "출처: 한국민족문화대백과사전 「절기」"
   }
 ]
