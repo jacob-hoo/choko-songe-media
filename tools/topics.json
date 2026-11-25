@@ -4498,5 +4498,225 @@
     ],
     "bubble": "달력에 표시해 봐요",
     "source": "출처: 한국민족문화대백과사전 「절기」"
+  },
+  {
+    "id": "m046-morning",
+    "type": "one",
+    "title": "초코송이의 아침 한 줄\n오늘의 마음",
+    "hook": "목요일,\n조금 지쳤나요?",
+    "body": "지친 만큼\n애쓴 거야.\n\n오늘은 조금\n천천히 가도 돼.",
+    "bubble": "천천히 가도 돼요",
+    "speaker": "choko",
+    "source": "초코송이 아침 한 줄 #046"
+  },
+  {
+    "id": "073-serial-position",
+    "type": "list",
+    "title": "외운 목록\n처음과 끝이 남아요",
+    "hook": "단어 20개 외우면,\n어디가 기억날까요?",
+    "items": [
+      "처음 몇 개가 잘 떠올라요",
+      "마지막 몇 개도 잘 떠올라요",
+      "가운데가 가장 잘 잊혀요"
+    ],
+    "bubble": "중요한 건 처음과 끝에",
+    "speaker": "choko",
+    "source": "출처: Murdock(1962), Journal of Experimental Psychology"
+  },
+  {
+    "id": "074-halo-warm",
+    "type": "list",
+    "title": "친절하면\n다 좋아 보여요",
+    "hook": "친절한 강사,\n외모도 나아 보일까요?",
+    "items": [
+      "같은 강사 영상을 두 가지로 보여 줬어요",
+      "따뜻한 쪽은 외모·말투까지 좋게 봤어요",
+      "학생들은 그 영향을 알아채지 못했어요"
+    ],
+    "bubble": "첫인상을 한 번 더 봐요",
+    "speaker": "song-e",
+    "source": "출처: Nisbett·Wilson(1977), Journal of Personality and Social Psychology"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s097-parent-deduction-70",
+    "type": "list",
+    "badge": "봄날 수첩 · 몇 년생 시리즈 17",
+    "title": "부모님 연말정산\n공제 기준",
+    "hook": "1956년생 부모님,\n공제 더 되나요?",
+    "items": [
+      "만 60세 이상 부모님: 1명당 150만 원",
+      "만 70세 이상이면 100만 원 더",
+      "부모님 연간 소득금액 100만 원 이하"
+    ],
+    "bubble": "부모님 소득부터 봐요",
+    "source": "출처: 국세청 연말정산 안내(소득세법 제50·51조)"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s098-urine-protein",
+    "type": "list",
+    "title": "검진표 요단백\n이 칸을 봐요",
+    "hook": "아버지 요단백,\n음성인가요?",
+    "items": [
+      "검진표 '요단백' 칸을 봐요",
+      "정상은 '음성'",
+      "약양성(±)·양성(+)이면 진료 상담"
+    ],
+    "bubble": "검진표 같이 봐요",
+    "source": "출처: 국민건강보험공단 건강검진 결과 안내"
+  },
+  {
+    "brand": "silver",
+    "speaker": "silver",
+    "id": "s099-irp-55",
+    "type": "list",
+    "title": "퇴직연금\n연금으로 받으면",
+    "hook": "만 55세,\n퇴직연금 어떻게 받나요?",
+    "items": [
+      "만 55세부터 연금으로 받을 수 있어요",
+      "연금으로 받으면 퇴직소득세 30% 덜 내요",
+      "11년 차부터 받는 몫은 40% 덜 내요"
+    ],
+    "bubble": "가입 금융회사에 물어봐요",
+    "source": "출처: 금융감독원 통합연금포털, 소득세법 제129조"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h097-spoon-holder",
+    "type": "list",
+    "badge": "엄마는 늦깎이 대학생 · 10분 살림 시리즈 17",
+    "title": "수저통 물때\n10분 손질",
+    "hook": "수저통 바닥,\n10분이면 닦일까요?",
+    "items": [
+      "수저 다 빼고 통을 분리하기",
+      "바닥 물때는 솔로 문질러 헹구기",
+      "바짝 말린 뒤 다시 꽂기"
+    ],
+    "bubble": "말려서 꽂아요",
+    "source": "엄마는 늦깎이 대학생 살림노트"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h098-hypercorrection",
+    "type": "list",
+    "title": "자신 있게 틀린 문제\n더 잘 고쳐져요",
+    "hook": "확신하고 틀린 문제,\n더 잘 기억할까요?",
+    "items": [
+      "자신 있게 틀린 답일수록",
+      "정답을 보면 더 잘 고쳐 기억했어요",
+      "오답노트엔 확신했던 문제부터"
+    ],
+    "bubble": "확신한 오답부터요",
+    "source": "출처: Butterfield·Metcalfe(2001), J. Exp. Psychology: LMC"
+  },
+  {
+    "brand": "mom",
+    "speaker": "mom",
+    "id": "h099-dishcloth",
+    "type": "list",
+    "title": "행주\n이렇게 관리해요",
+    "hook": "젖은 행주,\n하루 넘게 두세요?",
+    "items": [
+      "쓰고 나면 바로 빨기",
+      "자주 삶거나 세탁하기",
+      "바람 잘 드는 곳에 바짝 말리기"
+    ],
+    "bubble": "바짝 말려요",
+    "source": "출처: 식품의약품안전처 주방 위생 안내"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-013-beneficiary",
+    "type": "list",
+    "title": "보험 수익자\n바꾸는 법",
+    "hook": "보험금 받는 사람,\n바꿀 수 있나요?",
+    "items": [
+      "바꿀 권리는 계약자에게(상법 제733조)",
+      "남의 사망보험이면 그분 서면 동의",
+      "바꾼 뒤 보험사에 알리기(제734조)"
+    ],
+    "bubble": "증권에서 수익자부터 봐요",
+    "source": "출처: 국가법령정보센터 상법 제733조·제734조"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-014-risk-notice",
+    "type": "list",
+    "title": "가입 뒤에도\n알릴 의무",
+    "hook": "직업 바뀌면,\n보험사에 알려야 하나요?",
+    "items": [
+      "위험이 크게 바뀌면 지체 없이 알리기",
+      "직업·직무 변경이 해당하는지 약관 확인",
+      "알린 날짜·방법을 기록해 두기"
+    ],
+    "bubble": "약관 '알릴 의무'를 봐요",
+    "source": "출처: 국가법령정보센터 상법 제652조"
+  },
+  {
+    "brand": "ssi",
+    "speaker": "ssi",
+    "id": "g-ssi-015-disclosure-3yr",
+    "type": "list",
+    "title": "가입 때 알릴 의무\n기간이 있어요",
+    "hook": "가입 때 못 알린 일,\n언제까지 해지돼요?",
+    "items": [
+      "청약서 질문엔 사실대로 답해요",
+      "보험사는 안 날부터 1개월 안에 해지",
+      "계약일부터 3년 지나면 해지 못 해요"
+    ],
+    "bubble": "약관 기간도 같이 봐요",
+    "source": "출처: 국가법령정보센터 상법 제651조"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-013-daehan",
+    "type": "list",
+    "title": "24절기 마지막\n대한(大寒)",
+    "hook": "24절기 마지막,\n이름이 뭘까요?",
+    "items": [
+      "대한: 소한 다음, 24절기의 마지막",
+      "태양의 황경이 300도가 되는 때",
+      "양력 1월 21일 무렵"
+    ],
+    "bubble": "달력에 표시해 봐요",
+    "source": "출처: 한국민족문화대백과사전 「절기」"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-014-seollal-2026",
+    "type": "list",
+    "title": "2026년 설날\n양력 날짜",
+    "hook": "2026년 설날,\n양력 며칠일까요?",
+    "items": [
+      "설날은 음력 1월 1일",
+      "2026년 설날은 양력 2월 17일",
+      "해마다 양력 날짜가 달라져요"
+    ],
+    "bubble": "달력에서 찾아봐요",
+    "source": "출처: 한국천문연구원 음양력 변환"
+  },
+  {
+    "brand": "tojung",
+    "speaker": "tojung",
+    "id": "g-tj-015-boreum-2026",
+    "type": "list",
+    "title": "2026년 정월대보름\n양력 날짜",
+    "hook": "정월대보름,\n2026년엔 언제?",
+    "items": [
+      "음력 1월 15일, 새해 첫 보름",
+      "2026년은 양력 3월 3일",
+      "설날부터 14일 뒤예요"
+    ],
+    "bubble": "보름달을 찾아봐요",
+    "source": "출처: 한국천문연구원 음양력 변환"
   }
 ]
